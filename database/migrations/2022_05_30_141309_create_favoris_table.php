@@ -13,21 +13,20 @@ class CreateFavorisTable extends Migration
      */
     public function up()
     {
-        Schema::create('favoris', function (Blueprint $table) {
+         Schema::create('favoris', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            // $table->unsignedBigInteger('categorie_id');
-            $table->string('category_id');
+            $table->unsignedBigInteger('book_id');
 
             $table->foreign('user_id')
             ->references('id')
             ->on('users')
             ->onDelete('cascade');
 
-            // $table->foreign('categorie_id')
-            // ->references('id')
-            // ->on('categories')
-            // ->onDelete('cascade');
+            $table->foreign('book_id')
+            ->references('id')
+            ->on('books')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -66,7 +66,7 @@ Route::resource('books', BooksController::class);
 //Routes Notifications
 
 Route::resource('notifications', NotificationsController::class);
-Route::get('/app', [AppController::class, 'index'])->name('app.index');
+Route::get('/appHome', [AppController::class, 'index'])->name('app.index');
 Route::get('/app/show', [AppController::class, 'show']);
 Route::get('/app/bookShow/{id}', [AppController::class, 'bookShow'])->name('show');
 Route::post('/deconnexion', [AppController::class, 'deconnexion'])->name('deconnexion');

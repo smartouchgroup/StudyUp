@@ -3,10 +3,12 @@
 use App\Http\Controllers\API\AccountController;
 use App\Http\Controllers\API\AppController;
 use App\Http\Controllers\API\BooksController;
+use App\Http\Controllers\API\FavorisController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LoginController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\paymentBookController;
+use App\Http\Controllers\GoogleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,14 +26,17 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::post('/logout',[HomeController::class, 'logout']);
     Route::get('/books',[BooksController::class,'index']); // admin
-    Route::get('/app', [AppController::class, 'index']); // pour obtenir les livres  recemment ajouté par l'utilisateur
+    Route::get('/appHome', [AppController::class, 'index']); // pour obtenir les livres  recemment ajouté par l'utilisateur
     Route::post('/deconnexion', [AppController::class, 'deconnexion']);
     Route::post('/deposit',[AccountController::class,'store']);
     Route::get('categories',[AppController::class,'getCategories']);
     Route::get('payments',[paymentBookController::class,'index']); //recuperation des livres acheter
     Route::get('account',[AccountController::class,'index']); //show my account
     Route::post('buyBook',[paymentBookController::class,'store']);//buy  book
+    Route::post('favoris',[FavorisController::class,'store']); // ajout du livre gratuit a la bibliotheque
+    Route::get('getFavoris',[FavorisController::class,'getFavoris']); // recuperation des livres gratuits ajoutés a la bibliotheque
 });
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'authenticate']);
+
 

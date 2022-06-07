@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Favoris extends Model
 {
 protected $fillable = [
-    'user_id','category_id'
+    'user_id','book_id'
 ];
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
 
-    public function categories(){
-        return $this->hasMany(Categories::class,'categorie_id');
+    public function books(){
+        return $this->belongsTo(Books::class,'book_id');
     }
 }

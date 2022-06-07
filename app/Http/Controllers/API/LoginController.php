@@ -20,12 +20,12 @@ class LoginController extends Controller
         if ($validator->failed()) {
             return response()->json(['error' => "Veuillez renseiller vos informations correctement"], 401);
         }
-        $recuperation = DB::select('select role_id  from users where email=?', [$request->input('email')]);
-        if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+          if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return response()->json(['error' => "Vos identifiants sont incorrects"], 401);
-        } elseif ($recuperation[0]->role_id !== 2) {
-            return response()->json(['error' => "Vous n'êtes pas autorisé à vous connecter"], 401);
+        } else if ((int) Auth::user()->role_id !== 2) {
+            return response()->json(['error' => "Accès non autorisé!"], 401);
         }
+
         $token = auth()->user()->createToken('auth_token');
         return response()->json([
             'auth_token' => $token->plainTextToken,
