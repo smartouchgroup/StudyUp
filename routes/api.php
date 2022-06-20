@@ -8,7 +8,6 @@ use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LoginController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\paymentBookController;
-use App\Http\Controllers\GoogleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

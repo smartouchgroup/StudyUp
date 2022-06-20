@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class AppController extends Controller
 {
     public function index() {
-        // $books = Books::all();
+        
         $getFavoris = Favoris::where('user_id',Auth::user()->id)->first();
         $bookRecentlyAdded = Books::idDescending()->paginate(20)->fragment('books');
         $categories = Categories::all();
