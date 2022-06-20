@@ -43,9 +43,6 @@
                                 <th style="width: 20%" class="text-center">
                                     NOM DE LA CATEGORIE
                                 </th>
-                                <th style="width: 30%" class="text-center">
-                                    ICONE
-                                </th>
                                 <th style="width: 20%" class="text-center">
                                     ACTION
                                 </th>
@@ -54,25 +51,10 @@
                         @forelse($categories as $categorie)
                         <tbody>
                             <tr>
-
                                 <td class="text-center">
                                     <a>
                                         {{ $categorie->categorie }}
                                     </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <img alt="categorie" class="cercle" src="{{asset('image').'/'.$categorie->icone}}">
-                                            <style>
-                                                .cercle {
-                                                    width: 75px;
-                                                    height: 75px;
-                                                    border-radius: 50%;
-                                                }
-                                            </style>
-                                        </li>
-                                    </ul>
                                 </td>
                                 <td class="  d-flex justify-content-around ">
                                     <a href="{{ route('categories.edit',$categorie->id) }}">
@@ -130,13 +112,13 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Nom:</label>
-                                    <input type="text" class="form-control" name="categorie" id="recipient-name">
+                                    <input type="text" class="form-control" name="categorie" id="recipient-name" placeholder="Roman, developpement personnel, poesie">
                                     {!! $errors->first('categorie', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Icone:</label>
+                                {{-- <label for="recipient-name" class="col-form-label">Icone:</label>
                                     <input type="file" name="icone" class="form-control-file" id="exampleFormControlFile1">
-                                </div>
+                                </div> --}}
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary">Valider</button>
                                 </div>

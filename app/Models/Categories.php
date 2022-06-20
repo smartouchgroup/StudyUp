@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Categories extends Model
 {
     protected $fillable = [
-        'categorie', 'icone',
+        'categorie',
     ];
     public function scopeIdDescending($query){
         return $query->orderBy('created_at','desc');

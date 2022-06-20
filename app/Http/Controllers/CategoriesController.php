@@ -38,15 +38,8 @@ class CategoriesController extends Controller
     {
         $request->validate([
             'categorie' => 'required|string|',
-            'icone' => 'required|image|',
         ]);
-        $input = $request->all();
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = "$iconeImage";
-        }
+         $input = $request->all();
         Categories::create($input);
         return redirect()->intended('categories')->with('success', 'La catégorie a été ajouté avec succès');
     }
@@ -67,21 +60,10 @@ class CategoriesController extends Controller
     public function update(Request $request, Categories $categories)
     {
         $request->validate([
-            'categorie' => 'required|string|',
-            'icone' => '|image|',
+            'categorie' => 'required|string|'
         ]);
         $input = [];
         $input['categorie'] = $request->input('categorie');
-
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = $iconeImage;
-        } else {
-            unset($input['icone']);
-        }
-
         $categories->where('id', $request->input('categorieId'))->update($input);
 
         return redirect()->intended('categories')->with('success', 'La modification a été effectué avec succes');

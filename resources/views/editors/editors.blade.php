@@ -44,9 +44,6 @@
                                 <th style="width: 20%" class="text-center">
                                     NOM DE L'EDITEUR
                                 </th>
-                                <th style="width: 30%" class="text-center">
-                                    ICONE
-                                </th>
                                 <th style="width: 20%" class="text-center">
                                     ACTION
                                 </th>
@@ -59,20 +56,6 @@
                                     <a>
                                         {{ $editeur->nom }}
                                     </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <img alt="editeur" class="cercle" src="{{asset('image').'/'.$editeur->icone}}">
-                                            <style>
-                                                .cercle {
-                                                    width: 75px;
-                                                    height: 75px;
-                                                    border-radius: 50%;
-                                                }
-                                            </style>
-                                        </li>
-                                    </ul>
                                 </td>
                                 <td class="  d-flex justify-content-around ">
                                     <a href="{{ route('editors.edit',$editeur->id) }}">
@@ -125,13 +108,10 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Nom:</label>
-                                    <input type="text" class="form-control" name="nom" id="recipient-name">
+                                    <input type="text" class="form-control" name="nom" id="recipient-name" placeholder="L'harmattan ...">
                                     {!! $errors->first('nom', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
-                                    <label>Icone:</label>
-                                    <input type="file" name="icone" class="form-control-file" id="exampleFormControlFile1">
-                                </div>
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary">Valider</button>
                                 </div>

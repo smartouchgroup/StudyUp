@@ -20,6 +20,7 @@ use App\Http\Controllers\QuestsController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AproposController;
+use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\NotificationsController;
@@ -29,7 +30,6 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes(['verify' => true]);
 
-// require(__DIR__ . '../../app/Http/Controllers/Auth/auth.php');
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');

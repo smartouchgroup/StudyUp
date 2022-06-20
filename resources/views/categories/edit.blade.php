@@ -11,8 +11,8 @@
         </div>
     </div>
     <div class="container">
-        <section class="content">
-            <form method="post" action="{{ route('categories.update',$categories->id) }}" enctype="multipart/form-data">
+        <section class="content card p-3">
+            <form method="post" action="{{ route('categories.update',$categories->id) }}">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
@@ -21,10 +21,9 @@
                     <input type="hidden" name="categorieId" value="{{ $categories->id }}">
                     {!! $errors->first('categorie', '<small class="text-danger">:message</small>') !!}
                 </div>
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Icone:</label>
-                    <input type="file" value="{{ $categories->icone }}" class="form-control-file" name="icone" required >
-                </div>
+               <a href="{{ route('categories.index') }}">
+                <button type="submit" class="btn btn-primary">Retour</button>
+               </a>
                 <button type="submit" class="btn btn-primary">Modifier la catégorie</button>
             </form>
         </section>

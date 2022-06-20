@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Countries extends Model
 {
     protected $fillable = [
-        'pays','icone',
+        'pays',
     ];
     public function scopeIdDescending($query){
         return $query->orderBy('created_at','desc');

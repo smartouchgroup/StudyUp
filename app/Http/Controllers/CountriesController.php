@@ -27,16 +27,9 @@ class CountriesController extends Controller
     {
         $request->validate([
         	'pays'=>['required','string'],
-            'icone' => ['image'],
         ]);
         $input = $request->all();
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = "$iconeImage";
-        }
-       Countries::create($input);
+        Countries::create($input);
         return redirect()->intended('countrie')->with('success', 'Ajout reussi avec succes!');
     }
 
@@ -63,18 +56,9 @@ class CountriesController extends Controller
     {
         $request->validate([
             'pays' => ['required','string'],
-            'icone' => '|image|',
         ]);
         $input = [];
         $input['pays'] = $request->input('pays');
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = $iconeImage;
-        } else {
-            unset($input['icone']);
-        }
         $countries->where('id', $request->input('countrieId'))->update($input);
         return redirect()->intended('countrie')->with('success', 'La modification effectuée');
     }

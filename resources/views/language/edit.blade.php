@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="container">
-        <section class="content">
+        <section class="content card p-3">
             <form method="post" action="{{ route('language.update',$languages->id) }}" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
@@ -29,10 +29,9 @@
                     </select>
                     {!! $errors->first('language', '<small class="text-danger">:message</small>') !!}
                 </div>
-                <div class="form-group">
-                    <input type="file" value="{{ $languages->icone }}" class="form-control-file" name="icone"
-                        id="exampleFormControlFile1">
-                </div>
+                <a href="{{ route('language.index') }}">
+                    <button type="submit" class="btn btn-primary">Retour</button>
+                </a>
                 <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
         </section>

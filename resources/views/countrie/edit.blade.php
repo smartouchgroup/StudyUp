@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="container">
-        <section class="content">
+        <section class="content card p-3">
             <form method="post" action="{{ route('countrie.update',$countries->id) }}" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
@@ -279,10 +279,9 @@
                     </select>
                     {!! $errors->first('countrie', '<small class="text-danger">:message</small>') !!}
                 </div>
-                <div class="form-group">
-                    <label>Icone:</label>
-                    <input type="file" value="{{ $countries->icone }}" class="form-control-file" name="icone" id="exampleFormControlFile1">
-                </div>
+                <a href="{{ route('countrie.index') }}">
+                    <button type="submit" class="btn btn-primary">Retour</button>
+                </a>
                 <button type="submit" class="btn btn-primary">Modifier</button>
             </form>
         </section>

@@ -28,16 +28,9 @@ class LanguagesController extends Controller
     {
         $request->validate([
         	'langue'=>['required','string'],
-            'icone' => ['image'],
         ]);
         $input = $request->all();
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = "$iconeImage";
-        }
-       Languages::create($input);
+        Languages::create($input);
         return redirect()->intended('language')->with('success', 'Ajout reussi avec succes!');
     }
 
@@ -75,18 +68,9 @@ class LanguagesController extends Controller
     {
         $request->validate([
             'langue' => ['required','string'],
-            'icone' => '|image|',
         ]);
         $input = [];
         $input['langue'] = $request->input('langue');
-        if ($image = $request->file('icone')) {
-            $destinationPath = 'image/';
-            $iconeImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $iconeImage);
-            $input['icone'] = $iconeImage;
-        } else {
-            unset($input['icone']);
-        }
         $languages->where('id', $request->input('langueId'))->update($input);
         return redirect()->intended('language')->with('success', 'La modification effectuée');
     }

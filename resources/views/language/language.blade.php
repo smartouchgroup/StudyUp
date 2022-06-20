@@ -40,10 +40,6 @@
                                                     <option value="Espagnole">Espagnole</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group">
-                                                <label>Icone:</label>
-                                                <input type="file" name="icone" class="form-control-file" id="exampleFormControlFile1">
-                                            </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                                     Retour
@@ -68,9 +64,6 @@
                                 <th style="width: 20%" class="text-center">
                                     NOM
                                 </th>
-                                <th style="width: 30%" class="text-center">
-                                    ICONE
-                                </th>
                                 <th style="width: 20%" class="text-center">
                                     OPTION
                                 </th>
@@ -84,20 +77,6 @@
                                         {{ $language->langue }}
                                     </a>
                                     <br />
-                                </td>
-                                <td class="text-center">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <img alt="language" class="cercle" src="{{asset('image').'/'.$language->icone}}">
-                                            <style>
-                                                .cercle {
-                                                    width: 80px;
-                                                    height: 80px;
-                                                    border-radius: 50%;
-                                                }
-                                            </style>
-                                        </li>
-                                    </ul>
                                 </td>
                                 <td class="  d-flex justify-content-around ">
                                     <a href="{{ route('language.edit',$language->id) }}">

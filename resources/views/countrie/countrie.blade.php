@@ -290,10 +290,6 @@
                                                     <option value="Zimbabwe">Zimbabwe </option>
                                                 </select>
                                             </div>
-                                            <div class="form-group">
-                                                <label>Icone:</label>
-                                                <input type="file" name="icone" class="form-control-file" id="exampleFormControlFile1">
-                                            </div>
                                             <div class="modal-footer">
                                                 <button type="submit" class="btn btn-primary">Valider
                                                 </button>
@@ -315,9 +311,6 @@
                                 <th style="width: 20%" class="text-center">
                                     NOM DU PAYS
                                 </th>
-                                <th style="width: 30%" class="text-center">
-                                    ICONE
-                                </th>
                                 <th style="width: 20%" class="text-center">
                                     OPTION
                                 </th>
@@ -333,21 +326,6 @@
                                     <br />
 
                                 </td>
-                                <td class="text-center">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <img alt="pays" class="cercle" src="{{asset('image').'/'.$countrie->icone}}">
-                                            <style>
-                                                .cercle {
-                                                    width: 80px;
-                                                    height: 80px;
-                                                    border-radius: 50%;
-                                                }
-                                            </style>
-                                        </li>
-                                    </ul>
-                                </td>
-
                                 <td class="  d-flex justify-content-around ">
                                     <a href="{{ route('countrie.edit',$countrie->id) }}">
                                         <button class="btn btn-info btn-sm " type="button">

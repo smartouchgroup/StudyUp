@@ -16,7 +16,6 @@ class CreateEditorsTable extends Migration
         Schema::create('editors', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('icone')->nullable();
             $table->timestamps();
         });
     }
