@@ -138,6 +138,14 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('adminIndex') }}" class="nav-link">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p>
+                                   Messages
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

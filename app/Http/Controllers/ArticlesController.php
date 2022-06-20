@@ -18,15 +18,6 @@ class ArticlesController extends Controller
         return view('articles.articles',compact('articles'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -54,17 +45,6 @@ class ArticlesController extends Controller
         return redirect()->intended('articles')->with('success', "L'article a été ajouté avec succes");
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Articles  $articles
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Articles $articles)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

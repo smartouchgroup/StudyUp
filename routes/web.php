@@ -57,6 +57,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
+Route::get('/message', [ContactsController::class, 'adminIndex'])->name('adminIndex');
+Route::post('message',[ContactsController::class,'store'])->name('message.store');
+Route::get('destroy/{id}',[ContactsController::class,'destroy'])->name('message.delete');
 //Routes articles/blog
 Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
 //Routes a propos

@@ -18,15 +18,6 @@ class FaqsController extends Controller
         return view('Faqs.faqs',compact('faqs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -49,17 +40,6 @@ class FaqsController extends Controller
 
 
         return redirect()->intended('Faqs')->with('success', "faq a été ajouté avec succes");
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Faqs  $faqs
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Faqs $faqs)
-    {
-        //
     }
 
     /**

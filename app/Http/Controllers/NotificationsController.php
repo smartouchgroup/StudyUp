@@ -19,15 +19,6 @@ class NotificationsController extends Controller
         return view('notifications.notification',compact('notifications'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -49,16 +40,6 @@ class NotificationsController extends Controller
         return redirect()->intended('notifications')->with('success',"La notification a été ajouté avec succés");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Notifications  $notifications
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Notifications $notifications)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

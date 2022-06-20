@@ -34,16 +34,7 @@ class LanguagesController extends Controller
         return redirect()->intended('language')->with('success', 'Ajout reussi avec succes!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Languages  $languages
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Languages $languages)
-    {
-        //
-    }
+  
 
     /**
      * Show the form for editing the specified resource.
