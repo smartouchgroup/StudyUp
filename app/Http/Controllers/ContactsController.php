@@ -27,7 +27,7 @@ class ContactsController extends Controller
         return back()->with('success','Message envoyé');
     }
 
-    public function destroy( $id)
+    public function destroy($id)
     {
         $message = Contact::find($id);
         $message->delete();

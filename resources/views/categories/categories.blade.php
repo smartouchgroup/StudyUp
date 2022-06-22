@@ -93,6 +93,57 @@
                         @endforelse
                     </table>
                     {{ $categories->links() }}
+                    {{-- <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>NOM DE LA CATEGORIE</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        @forelse($categories as $categorie)
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <a>
+                                        {{ $categorie->categorie }}
+                                    </a>
+                                </td>
+                                <td class="  d-flex justify-content-around ">
+                                    <a href="{{ route('categories.edit',$categorie->id) }}">
+                                        <button class="btn btn-info btn-sm " type="button">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Editer
+                                        </button>
+                                    </a>
+                                    <form action="{{ route('categories.destroy',$categorie->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger btn-sm" type="submit">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Supprimer
+                                        </button>
+                                        <script>
+                                            function alerte(){
+                                                alert('Voulez-vous vraiment retirer cette catégorie?')
+                                            }
+                                        </script>
+                                    </form>
+                                </td>
+                                @empty
+                                <div class="alert alert-warning col-md-12 col-xs-12" role="alert">
+                                    <p class='font-weight-bolder text-center '>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                        </svg>
+                                        Aucune Categorie disponible
+                                    </p>
+                                </div>
+                            </tr>
+                        </tbody>
+                        @endforelse
+                    </table> --}}
                 </div>
             </div>
 

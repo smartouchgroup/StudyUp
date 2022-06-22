@@ -14,10 +14,4 @@ class DashboardController extends Controller
         $articles = Books::all();
         return view('layouts.Admin',compact('books','users','articles'));
     }
-    public function master(){
-        $books = Books::all();
-        $users = User::all();
-        $articles = Books::all();
-        return view('layouts.master',compact('books','users','articles'));
-    }
 }

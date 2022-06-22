@@ -16,10 +16,18 @@ class FavorisController extends Controller
     }
     public function store(Request $request)
     {
+
         Favoris::create([
             'user_id' =>$request->user_id,
             'book_id' => $request->book_id,
         ]);
         return response()->json(['message' => "Ajout du livre à été un succès"], 200);
     }
+
+    public function delete($id){
+        $deleteFavorisBook = Favoris::find($id);
+        $deleteFavorisBook->delete();
+        return response()->json(['message' => "Vous avez retiré ce livre"], 200);
+    }
+
 }

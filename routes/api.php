@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::post('buyBook',[paymentBookController::class,'store']);//buy  book
     Route::post('favoris',[FavorisController::class,'store']); // ajout du livre gratuit a la bibliotheque
     Route::get('getFavoris',[FavorisController::class,'getFavoris']); // recuperation des livres gratuits ajoutés a la bibliotheque
+    Route::delete('delete/{id}',[FavorisController::class,'delete']);
 });
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'authenticate']);

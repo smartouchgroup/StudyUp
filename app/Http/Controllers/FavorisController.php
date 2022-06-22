@@ -35,4 +35,5 @@ class FavorisController extends Controller
         ]);
         return redirect()->route('app.index');
     }
+    
 }

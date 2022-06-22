@@ -16,6 +16,7 @@ class paymentBookController extends Controller
         $biblios = PaymentBook::where('user_id',Auth::user()->id)->get();
         return BiblioResource::collection($biblios);
     }
+    
 
     public function store(Request $request){
         $userAccountAmount = Account::where('user_id', Auth::user()->id)->first();
