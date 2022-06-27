@@ -46,15 +46,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('language', LanguagesController::class);
     Route::resource('countrie', CountriesController::class);
     Route::resource('Faqs', FaqsController::class);
-    Route::get('quest', [QuestsController::class, 'index']);
 
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
     Route::post('/deposit', [AccountController::class, 'store'])->name('account.store');
     Route::post('payments', [paymentBookController::class, 'store'])->name('payment.store');
     Route::get('payments', [paymentBookController::class, 'index'])->name('payment.index');
 });
-// Route::resource('/', 'HomesController');
-
+Route::get('quest', [QuestsController::class, 'index']);
 
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 Route::get('/message', [ContactsController::class, 'adminIndex'])->name('adminIndex');

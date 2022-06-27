@@ -15,7 +15,7 @@ class AppController extends Controller
         $bookRecentlyAdded = Books::all();
         return BookResource::collection($bookRecentlyAdded);
     }
-    
+
     public function deconnexion(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
@@ -27,5 +27,8 @@ class AppController extends Controller
     public function getCategories(){
         $getCategories = Categories::all();
         return $getCategories ;
+    }
+    public function test(){
+        return 'test';
     }
 }

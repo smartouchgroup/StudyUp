@@ -14,5 +14,7 @@ class HomeController extends Controller
             'success' => "Deconnexion effectuée avec succès"
         ], 200);
     }
-    
+    public function test(){
+        return 'test';
+    }
 }
