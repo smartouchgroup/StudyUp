@@ -14,7 +14,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Categories::idDescending()->paginate(5)->fragment('categories');
+        $categories = Categories::idDescending()->paginate(7)->fragment('categories');
         return view('categories.categories', compact('categories'));
     }
 

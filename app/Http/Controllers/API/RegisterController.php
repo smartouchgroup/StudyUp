@@ -21,12 +21,16 @@ class RegisterController extends Controller
         $validator = Validator::make($request->all(), [
             'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'same:email-confirm', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email',  'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'same:password-confirm'],
         ]);
 
         if ($validator->failed()) {
             return response()->json(['error' => "Veuillez renseiller vos informations correctement"], 401);
+        }
+        $getEmail = User::where('email',$request->input('email'))->exists();
+        if ($getEmail) {
+            return response()->json(['error' => "Ce email exist déjà"], 401);
         }
         $user =   User::create([
             'firstname' => $request->input('firstname'),

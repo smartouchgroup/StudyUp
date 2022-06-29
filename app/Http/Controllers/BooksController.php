@@ -8,6 +8,7 @@ use App\Models\Categories;
 use App\Models\Countries;
 use App\Models\Editors;
 use App\Models\Languages;
+use App\Models\Like;
 use Illuminate\Http\Request;
 use League\CommonMark\Block\Element\Document;
 
@@ -39,7 +40,7 @@ class BooksController extends Controller
     public function store(Request $request)
     {
 
-        $test = $request->validate([
+         $request->validate([
             'titre' => 'required|string|',
             'categorie_id' => 'required',
             'editeur_id' => 'required',
@@ -67,12 +68,16 @@ class BooksController extends Controller
             $input['document'] = "$books";
         }
 
-        Books::create($input);
+       $getBook_id = Books::create($input);
+        Like::create([
+            'book_id' => $getBook_id->id,
+            'like_number' => 0
+        ]);
 
         return redirect()->intended('books')->with('success', " Ajout effectué avec succes");
     }
 
- 
+
     /**
      * Show the form for editing the specified resource.
      *

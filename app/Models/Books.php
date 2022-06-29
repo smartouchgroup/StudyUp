@@ -30,5 +30,8 @@ class Books extends Model
     public function countrie(){
         return $this->belongsTo(Countries::class,'pays_id');
     }
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
 
 }

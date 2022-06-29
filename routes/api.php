@@ -7,6 +7,7 @@ use App\Http\Controllers\API\FavorisController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LoginController;
 use App\Http\Controllers\API\HomeController;
+use App\Http\Controllers\API\LikeController;
 use App\Http\Controllers\API\paymentBookController;
 use App\Http\Controllers\API\UpdateDataController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,9 @@ Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::post('changeData',[UpdateDataController::class,'changeData']);//mise à jour du nom et prénom de l'utilisateur
     Route::post('changeProfile',[UpdateDataController::class,'upload']); //mise à jour de la photo de profiile
     Route::post('changePassword',[UpdateDataController::class,'changePassword']); //mise à jour du mot de passe
+    Route::post('liked',[LikeController::class,'liked']);
+    Route::post('disliked',[LikeController::class,'disliked']);
+    Route::get('getBestLiked',[LikeController::class,'getBestLiked']);
 });
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'authenticate']);
