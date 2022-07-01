@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $books = Books::all();
         $articles = Articles::all();
         $messages = Contact::all();
-        $users = User::where('id','!=', 1)->paginate(10);
+        $users = User::where('role_id','!=', 1)->paginate(10);
         return view('layouts.Admin',compact('books','users','articles','messages'));
     }
 }
