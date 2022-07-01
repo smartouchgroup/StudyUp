@@ -44,7 +44,8 @@
                                      <input type="hidden" name="bookId" value="{{ $books->id }}">
                                     <div class="form-group">
                                         <label for="inputName">Titre du livre</label>
-                                        <input type="text" name="titre" id="inputName" Value='{{ $books->titre }}' class="form-control" placeholder='Veuillez entre le titre du livre' required'>
+                                        <input type="text" name="titre" id="inputName" Value='{{ $books->titre }}' class="form-control" placeholder='Veuillez entre le titre du livre' >
+                                        {!! $errors->first('titre', '<small class="text-danger">:message</small>') !!}
                                     </div>
                                     <div class="form-group">
                                         <label for="inputStatus">Catégories</label>
@@ -75,12 +76,14 @@
                                         <label for="inputDescription">Description /Resumé</label>
                                         <textarea id="inputDescription" name="description" class="form-control"
                                             rows="10">{{  $books->description}}</textarea>
+                                            {!! $errors->first('description', '<small class="text-danger">:message</small>') !!}
                                     </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="inputName">Nombre de pages</label>
                                     <input type="number" name="page" id="inputName" Value='{{ $books->page }}' class="form-control" placeholder="Veuillez entrer le nombre de page du livre">
+                                    {!! $errors->first('page', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
                                     <label for="inputStatus">Auteur</label>
@@ -102,6 +105,7 @@
                                 <div class="form-group">
                                     <label for="inputClientCompany">Prix</label>
                                     <input type="number" name="prix" id="inputClientCompany" value="{{ $books->prix }}" class="form-control" placeholder="Veuillez entrer le prix du livre">
+                                    {!! $errors->first('prix', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -156,14 +160,18 @@
                                             <label for="">Ajouter un document</label>
                                         </div>
                                         <div class="card">
-                                            <input class="input bg-white-50" type="file" name="document" value="" accept="pdf" >
-
+                                            <input class="input bg-white-50" type="file" name="document" required value="" accept="pdf" >
+                                            {!! $errors->first('document', '<small
+                                            class="text-danger">:message</small>') !!}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Modifier le livre </button>
+                            <button type="submit" class="btn btn-primary mx-2">Modifier le livre </button>
                             </form>
+                           <a href="{{ route('books.index') }}">
+                            <button type="submit" class="btn btn-primary">Retour </button>
+                           </a>
                         </div>
                     </div>
                 </div>

@@ -41,12 +41,13 @@
                                 <form action="{{ route('books.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="inputName">Titre du livre</label>
-                                        <input type="text" name="titre" id="inputName" class="form-control" placeholder='Veuillez entre le titre du livre' required'>
+                                        <label for="titreName">Titre du livre</label>
+                                        <input type="text" name="titre" id="inputName" class="form-control" placeholder='Veuillez entre le titre du livre' >
+                                        {!! $errors->first('titre', '<small class="text-danger">:message</small>') !!}
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">Catégories</label>
-                                        <select id="inputStatus" name="categorie_id" class="form-control custom-select">
+                                        <label for="categorie">Catégories</label>
+                                        <select  name="categorie_id" class="form-control custom-select">
                                             @foreach($categories as $categorie)
                                             <option selected value="{{ $categorie->id }}">{{ $categorie->categorie }}
                                             </option>
@@ -54,16 +55,16 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">Editeur</label>
-                                        <select id="inputStatus" name="editeur_id" class="form-control custom-select">
+                                        <label for="editeur">Editeur</label>
+                                        <select  name="editeur_id" class="form-control custom-select">
                                             @foreach($editors as $editor)
                                             <option selected value="{{ $editor->id }}">{{ $editor->nom}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">langue</label>
-                                        <select id="inputStatus" name="langue_id" class="form-control custom-select">
+                                        <label for="langue">langue</label>
+                                        <select  name="langue_id" class="form-control custom-select">
                                             @foreach($languages as $language)
                                             <option selected value="{{ $language->id }}">{{ $language->langue}}</option>
                                             @endforeach
@@ -73,15 +74,17 @@
                                         <label for="inputDescription">Description /Resumé</label>
                                         <textarea id="inputDescription" name="description" class="form-control"
                                             rows="10"></textarea>
+                                            {!! $errors->first('description', '<small class="text-danger">:message</small>') !!}
                                     </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="inputName">Nombre de pages</label>
-                                    <input type="number" name="page" id="inputName" class="form-control" placeholder="Veuillez entrer le nombre de page du livre">
+                                    <label for="pages">Nombre de pages</label>
+                                    <input type="number" name="page"  class="form-control" placeholder="Veuillez entrer le nombre de page du livre">
+                                    {!! $errors->first('page', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputStatus">Auteur</label>
+                                    <label for="auteur">Auteur</label>
                                     <select id="inputStatus" name="auteur_id" class="form-control custom-select">
                                         @foreach($authors as $author)
                                         <option selected value="{{ $author->id }}">{{ $author->nom}}
@@ -90,7 +93,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputStatus">Pays</label>
+                                    <label for="pays">Pays</label>
                                     <select id="inputStatus" name="pays_id" class="form-control custom-select">
                                         @foreach($countries as $countrie)
                                         <option selected value="{{ $countrie->id }}">{{ $countrie->pays}}</option>
@@ -98,8 +101,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputClientCompany">Prix</label>
+                                    <label for="prix">Prix</label>
                                     <input type="number" name="prix" id="inputClientCompany" class="form-control" placeholder="Veuillez entrer le prix du livre">
+                                    {!! $errors->first('prix', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -110,7 +114,7 @@
                                             <div class="image-upload-wrap">
                                                 <input class="file-upload-input" type='file' name="photo"
                                                     onchange="readURL(this);" accept="image/*" />
-
+                                                    {!! $errors->first('photo', '<small class="text-danger">:message</small>') !!}
                                                 <div class="drag-text">
                                                     <h3>Ajouter une Photo</h3>
                                                 </div>
@@ -155,6 +159,7 @@
                                         </div>
                                         <div class="card">
                                             <input class="input bg-white-50" type="file" name="document"  accept="pdf">
+                                            {!! $errors->first('document', '<small class="text-danger">:message</small>') !!}
                                         </div>
                                     </div>
                                 </div>

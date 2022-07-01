@@ -10,7 +10,6 @@ use App\Models\Editors;
 use App\Models\Languages;
 use App\Models\Like;
 use Illuminate\Http\Request;
-use League\CommonMark\Block\Element\Document;
 
 class BooksController extends Controller
 {
@@ -46,7 +45,7 @@ class BooksController extends Controller
             'editeur_id' => 'required',
             'langue_id' => 'required',
             'description' => 'required|string|',
-            'document' => "required|mimes:pdf|max:10000",
+            'document' => "required|mimes:pdf",
             'page' => 'required|integer|',
             'auteur_id' => 'required',
             'pays_id' => 'required',
@@ -115,7 +114,7 @@ class BooksController extends Controller
             'pays_id' => 'required',
             'prix' => 'required|integer|',
             'photo' => '|image|',
-            'document' => "|mimes:pdf|max:10000",
+            'document' => "|mimes:pdf|",
         ]);
 
         $input = [];
@@ -149,7 +148,6 @@ class BooksController extends Controller
             unset($input['document']);
         }
 
-        // $books->where('id', $request->input('bookId'))->update($input);
         $books = Books::where('id',$request->input('bookId'))->first();
         $books->update($input);
 
@@ -166,6 +164,6 @@ class BooksController extends Controller
     {
         $books = Books::find($id);
         $books->delete();
-        return redirect('books')->with('success', 'La suppression a été effectué avec succes');
+        return redirect('books')->with('success', 'La suppression a été effectué avec succès');
     }
 }
