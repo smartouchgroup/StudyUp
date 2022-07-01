@@ -13,7 +13,7 @@
     <div class="container">
         <div class="card ">
             <div class="card-header">
-                <h3 class="card-title">Ajout de faq</h3>
+                <h3 class="card-title">Modification de faq</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
@@ -45,12 +45,12 @@
                             </div>
                             <div class="form-group">
                                 <label>Contenu du faq</label>
-                                <input type='text' class="form-control" name="contenu" value='{{  $faqs->contenu }}'
+                                <input type='text' class="form-control" name="contenu" value='{{ $faqs->contenu }}'
                                     id="Xy">
                                 {!! $errors->first('contenu', '<small class="text-danger">:message</small>') !!}
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="card-footer">

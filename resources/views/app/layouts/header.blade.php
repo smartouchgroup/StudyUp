@@ -28,7 +28,7 @@
                 </a>
                 <a href="#" id="user" class="mx-4 d-flex justify-content-center align-items-center text-smt-sixth text-decoration-none hover-text-smt-tertiary">
                     <img src="{{asset('dist/img/avatar.svg')}}" alt="Avatar">
-                    <span class="mx-1">AbubakrSidick</span>
+                    <span class="mx-1">{{ Auth::user()->firstname }}</span>
                     <i class="fas fa-sort-down mb-2"></i>
                 </a>
             </div>

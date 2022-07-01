@@ -67,7 +67,7 @@
 
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="index3.html" class="brand-link">
+            <a href="{{ route('dashboard') }}" class="brand-link">
                 <img src="{{ asset('dist/img/logo.png') }}" alt="Study" class="brand-image img-circle elevation-3"
                     style="color:white">
                 <span class="brand-text font-weight-bolder">StudyUp</span>
@@ -148,7 +148,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('notifications.index') }}" class="nav-link">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <p>
                                     Gestion Notifications

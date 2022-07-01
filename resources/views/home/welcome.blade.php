@@ -22,7 +22,11 @@
         <div class="row">
             <div class="offset-2"></div>
             <div class="col-lg-8">
-                <p class="text-smt-primary text-center mx-2 my-4 font-weight-bolder">{{$notification->message}} <a href="" class="font-weight-bold text-smt-secondary"> Plus d'informations ?</a></p>
+                <p class="text-smt-primary text-center mx-2 my-4 font-weight-bolder">{{$notification->message}}
+                @if ($notification->url != null)
+                <a href=" {{$notification->url}} " target="_blank" class="font-weight-bold text-smt-secondary mx-1"> Plus d'informations ?</a>
+                @endif
+                </p>
             </div>
             <div class="offset-2"></div>
         </div>

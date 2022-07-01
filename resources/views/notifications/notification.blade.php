@@ -30,7 +30,9 @@
                 <div class="card-header">
                     <h3 class="card-title font-weight-bold text-uppercase">Notifications</h3>
                     <div class="card-tools d-flex justify-content-between">
-                        <button type="button" class="btn btn-block btn-outline-success btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Publier une notification</button>
+                      @if (count($notifications) == null)
+                      <button type="button" class="btn btn-block btn-outline-success btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Publier une notification</button>
+                      @endif
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
                         </button>
@@ -40,9 +42,6 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th style="width: 1%">
-                                    N°
-                                </th>
                                 <th style="width: 20%" class="text-center">
                                    MESSAGE
                                 </th>
@@ -57,14 +56,15 @@
                         @forelse($notifications as $notification)
                         <tbody>
                             <tr>
-                                <td>
-                                    {{ $notification->id }}
-                                </td>
                                 <td class="text-center">
                                 {{ $notification->message}}
                                 </td>
                                 <td class="text-center">
-                                <a href="{{ $notification->url }}">{{ $notification->url }}</a>
+                               @if (empty($notification->url))
+                                    aucun lien
+                               @else
+                               <a href="{{ $notification->url }}">{{ $notification->url }}</a>
+                               @endif
                                 </td>
                                 <td class=" d-flex justify-content-around my-4 ">
                                     <a href="{{ route('notifications.edit',$notification->id) }}">
@@ -82,11 +82,6 @@
                                             </i>
                                             Supprimer
                                         </button>
-                                        <!-- <script>
-                                            function alerte(){
-                                                alert('Voulez-vous vraiment retirer cette catégorie?')
-                                            }
-                                        </script> -->
                                     </form>
                                 </td>
                                @empty
@@ -122,12 +117,12 @@
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Message:</label>
                                     <textarea type="text" class="form-control" name="message" id="" cols="30" rows="5"></textarea>
-                                    {!! $errors->first('Message', '<small class="text-danger">:message</small>') !!}
+                                    {!! $errors->first('message', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">URL/lien</label>
                                     <input type="text" class="form-control" name="url" id="recipient-name">
-                                    {!! $errors->first('URL/lien', '<small class="text-danger">:message</small>') !!}
+                                    {!! $errors->first('url', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary">Publier</button>

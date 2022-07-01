@@ -248,7 +248,7 @@
                   <div class="fit-content">
                       <span class="text-smt-sixth">
                       @if ($drame->prix == null)
-                        php artisan serve
+
                           <h6 class="mt-2">Gratuit</h6>
                       @else
                           {{$drame->prix}} Fcfa

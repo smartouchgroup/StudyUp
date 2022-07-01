@@ -13,8 +13,8 @@
 </div>
 <div class="container-fluid ">
     <div class="row  ">
-
-        <div class="col-lg-7 mb-5">
+        <div class="offset-2"></div>
+        <div class="col-lg-8 mb-5">
             <div class="card">
                 @foreach($articles as $article)
                 <div class="fond text-center " style='background: {{$article->color}};'>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="card-body  ">
                     <h5 class="card-title text-center text-smt-tertiary font-weight-bold ">{{ $article->titre }}</h5>
-                    <p class="card-text text-center text-smt-tertiary">{{ $article->contenu }}</p>
+                    <p class="card-text text-center text-smt-tertiary">{{  $article->contenu }} </p>
                     <div class="bordure  d-flex  justify-content-end ">
                         <h6 class="my-2">Publié le {{ date('d-m-Y',strtotime($article->created_at ))}}</h6>
                     </div>
@@ -30,7 +30,8 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-lg-5">
+        <div class="offset-2"></div>
+        {{-- <div class="col-lg-5">
             <div class="card " style="width: 100%">
                 <div class="card-header ">
                     <h4 class="font-weight-bold text-smt-tertiary">Derniers Articles</h4>
@@ -52,7 +53,7 @@
                     @endforeach
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- <div class="col-lg-5">
             <div class="card" style="width: 100%;">
                 <div class="card-header">

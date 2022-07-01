@@ -42,7 +42,7 @@
                                 {!! $errors->first('contenu', '<small class="text-danger">:message</small>') !!}
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="card-footer">
@@ -64,13 +64,10 @@
                 <table class="table table-striped projects">
                     <thead>
                         <tr>
-                            <th style="width: 1%">
-                                N°
-                            </th>
                             <th style="width: 40%" class="text-center">
                                 TITRES
                             </th>
-                           
+
                             <th style="width: 40%" class="text-center">
                                 Contenu
                             </th>
@@ -82,14 +79,11 @@
                     @forelse($faqs as $faq)
                     <tbody>
                         <tr>
-                            <td>
-                                {{ $faq->id }}
+                            <td class="text-center">
+                                {{ $faq->titre }}
                             </td>
-                            <td class="text-center">                               
-                                {{ $faq->titre }}                                
-                            </td>                        
-                            <td class="text-center">                               
-                                {{ $faq->contenu }}                           
+                            <td class="text-center">
+                                {{ $faq->contenu }}
                             </td>
                             <td class="  d-flex justify-content-around my-4">
                                 <a href="{{ route('Faqs.edit',$faq->id) }}">
@@ -107,7 +101,7 @@
                                         </i>
                                         Supprimer
                                     </button>
-                                    
+
                                 </form>
                             </td>
                             @empty
@@ -123,6 +117,7 @@
                     </tbody>
                     @endforelse
                 </table>
+                {{ $faqs->links() }}
             </div>
         </div>
     </div>

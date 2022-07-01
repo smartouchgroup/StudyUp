@@ -14,7 +14,7 @@ class FaqsController extends Controller
      */
     public function index()
     {
-        $faqs = Faqs::all();
+        $faqs = Faqs::paginate(3);
         return view('Faqs.faqs',compact('faqs'));
     }
 
@@ -37,7 +37,6 @@ class FaqsController extends Controller
             'contenu'=>$data['contenu'],
 
         ]);
-
 
         return redirect()->intended('Faqs')->with('success', "faq a été ajouté avec succes");
     }

@@ -50,22 +50,21 @@
                             </div>
                             <div class="form-group">
                                 <label>Contenu de l'article</label>
-                                <textarea type='text' class="form-control" name="contenu" id="Xy"></textarea>
-                               
+                                <textarea type='text' class="form-control"   id="" name="contenu" id="Xy"></textarea>
                                 {!! $errors->first('contenu', '<small class="text-danger">:message</small>') !!}
                             </div>
-                            <div class="form-check form-switch col-12">
+                            {{-- <div class="form-check form-switch col-12">
                                 <input class="form-check-input" type="checkbox" name="last_article">
                                 <label class="form-check-label font-weight-bolder" >selectionner comme derniers articles</label>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-3 col-md-3 col-xs-12 my-5">
                             <div class="file-upload">
                                 <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
                                     Image</button>
                                 <div class="image-upload-wrap">
-                                    <input class="file-upload-input" type='file' name="photo" onchange="readURL(this);" accept="image/*" />
-
+                                    <input class="file-upload-input" required type='file' name="photo" onchange="readURL(this);" accept="image/*" />
+                                    {!! $errors->first('photo', '<small class="text-danger">:message</small>') !!}
                                     <div class="drag-text">
                                         <h3>Ajouter une Photo</h3>
                                     </div>
@@ -100,9 +99,6 @@
                 <table class="table table-striped projects">
                     <thead>
                         <tr>
-                            <th style="width: 1%">
-                                N°
-                            </th>
                             <th style="width: 20%" class="text-center">
                                 TITRES
                             </th>
@@ -123,9 +119,6 @@
                     @forelse($articles as $article)
                     <tbody>
                         <tr>
-                            <td>
-                                {{ $article->id }}
-                            </td>
                             <td class="text-center">
                                 {{ $article->titre }}
                             </td>
@@ -161,11 +154,6 @@
                                     <button class="btn btn-danger btn-sm mx-4" onclick="alerte()" type="submit">
                                         Supprimer
                                     </button>
-                                    <!-- <script>
-                                            function alerte(){
-                                                alert('Voulez-vous vraiment retirer cette catégorie?')
-                                            }
-                                        </script> -->
                                 </form>
                             </td>
                             @empty
@@ -181,6 +169,7 @@
                     </tbody>
                     @endforelse
                 </table>
+                {{ $articles->links()}}
             </div>
         </div>
     </div>

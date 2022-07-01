@@ -30,7 +30,6 @@ class NotificationsController extends Controller
     {
         $request->validate([
             'message' => 'required|string|',
-            'url' => 'required|string|'
 
         ]);
         Notifications::create([
@@ -64,7 +63,6 @@ class NotificationsController extends Controller
     {
         $request->validate([
             'message' => 'required|string|',
-            'url' => 'required|string|',
         ]);
         $notifications = Notifications::find($id);
         $notifications->message =  $request->get('message');

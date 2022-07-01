@@ -52,13 +52,13 @@
                             </div>
                             <div class="form-group">
                                 <label>Contenu de l'article</label>
-                                <textarea type='text' name="contenu" value='{{  $articles->contenu }}' id="summernote"></textarea>
+                                <textarea type='text' name="contenu"  class="form-control"  value='{{  $articles->contenu }}' required  ></textarea>
                                 {!! $errors->first('contenu', '<small class="text-danger">:message</small>') !!}
                             </div>
-                            <div class="form-check form-switch col-12">
+                            {{-- <div class="form-check form-switch col-12">
                                 <input class="form-check-input" type="checkbox" value="{{ $articles->last_article }}" name="last_article">
                                 <label class="form-check-label font-weight-bolder" >selectionner comme derniers articles</label>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-3 col-md-3 col-xs-12 my-5">
                             <div class="file-upload">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Publier</button>
+                    <button type="submit" class="btn btn-primary">Modifier</button>
                 </div>
             </form>
         </div>

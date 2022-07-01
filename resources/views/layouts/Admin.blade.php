@@ -64,7 +64,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="{{ route('dashboard') }}" class="brand-link">
                 <img src="dist/img/logo.png" alt="Study" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-bolder">StudyUp</span>
             </a>
@@ -79,7 +79,7 @@
                with font-awesome or any other icon font library -->
                         <li class="nav-item menu-open">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="{{ route('dashboard') }}" class="nav-link active">
                                 <i class="fa fa-book" aria-hidden="true"></i>
                                 <p>Gestion de bibliothèque</p>
                             </a>
@@ -149,10 +149,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('notifications.index') }}" class="nav-link">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <p>
                                     Gestion Notifications
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('adminIndex') }}" class="nav-link">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p>
+                                    Messages
                                 </p>
                             </a>
                         </li>
@@ -186,14 +194,14 @@
                             <!-- small box -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>0{{ $books->count() }}</h3>
+                                    <h3>{{ $books->count() }}</h3>
 
                                     <p>Livres enregistrés</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="nav-icon fas fa-copy"></i>
+                                    <i class="nav-icon fas fa-book"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="{{ route('books.index') }}" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -201,14 +209,14 @@
                             <!-- small box -->
                             <div class="small-box bg-success">
                                 <div class="inner">
-                                    <h3>0{{ $articles->count() }}</h3>
+                                    <h3>{{ $articles->count() }}</h3>
 
                                     <p>Articles</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
+                                    <i class=" nav-icon fas fa-newspaper"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="{{ route('articles.index') }}" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -216,7 +224,7 @@
                             <!-- small box -->
                             <div class="small-box bg-warning">
                                 <div class="inner">
-                                    <h3>0{{ $users->count() }}</h3>
+                                    <h3>{{ $users->count() }}</h3>
 
                                     <p>Utilisateurs</p>
                                 </div>
@@ -231,20 +239,71 @@
                             <!-- small box -->
                             <div class="small-box bg-danger">
                                 <div class="inner">
-                                    <h3>0{{ $users->count() }}</h3>
+                                    <h3>{{ $messages->count() }}</h3>
 
-                                    <p>Visiteurs</p>
+                                    <p>messages</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="nav-icon fas fa-user"></i>
+                                    <i class="nav-icon fas fa-envelope"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="{{ route('adminIndex') }}" class="small-box-footer">Plus d'info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
                     </div>
-
-                    <!-- /.row (main row) -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title font-weight-bold text-uppercase">Utilisateur ({{ count($users) }})  </h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-striped projects">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20%" class="text-center">
+                                            NOM
+                                        </th>
+                                        <th style="width: 20%" class="text-center">
+                                            PRENOM(S)
+                                        </th>
+                                        <th style="width: 20%" class="text-center">
+                                            Email
+                                        </th>
+                                        <th style="width: 20%" class="text-center">
+                                            Date d'incription
+                                        </th>
+                                    </tr>
+                                </thead>
+                                @forelse ($users as $user)
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">
+                                            {{ $user->firstname }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ $user->lastname }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ $user->email }}
+                                        </td>
+                                        <th style="width: 20%" class="text-center">
+                                            {{ date('d-m-Y',strtotime($user->created_at )) }}
+                                        </th>
+                                        @empty
+                                        <div class="alert alert-warning col-md-12 col-xs-12" role="alert">
+                                            <p class='font-weight-bolder text-center '>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                                </svg>
+                                                Aucune utilisateur enregistrer
+                                            </p>
+                                        </div>
+                                    </tr>
+                                </tbody>
+                            @endforelse
+                            </table>
+                          {{  $users->links()  }}
+                        </div>
+                    </div>
                 </div><!-- /.container-fluid -->
             </section>
             <!-- /.content -->
