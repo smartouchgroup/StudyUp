@@ -33,4 +33,7 @@ class HomeController extends Controller
         Auth::logout();
         return redirect('login');
     }
+    public function download(){
+        return view('home.download');
+    }
 }

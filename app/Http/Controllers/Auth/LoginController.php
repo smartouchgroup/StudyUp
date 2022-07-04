@@ -56,7 +56,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin');
         } elseif (Auth::attempt($credentials) && $recuperation[0]->role_id == 2) {
             $request->session()->regenerate();
-            return redirect()->route('app.index');
+            return redirect()->route('download');
         }  else {
             return back()->with('warning', "L'un des champs entré est incorrect!");
         }

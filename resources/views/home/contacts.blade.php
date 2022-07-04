@@ -38,17 +38,19 @@
                 <h4 class="mb-5 font-weight-bold text-smt-tertiary text-white">Nous contacter autrement</h4>
                 <div class="fit-content py-3 col-xs-12">
                     <span class="h3"><i class="fas fa-phone-alt"></i></span>
-                    <a class="h5 ml-3 font-weight-bold text-white" href="tel:0022655026262">+226 55 02 62 62</a>
+                    <a class="h5 ml-3 font-weight-bold text-white" href="tel:0022655026262">+226 55 02 62 62 / 53 02 62 62</a>
+
                 </div>
 
                 <div class="fit-content py-3 col-xs-12">
                     <span class="h3"><i class="fas fa-envelope"></i></span>
-                    <a class="h5 ml-3 font-weight-bold text-white" href="mailto:smtgroup@gmail.com">smtgroup@gmail.com</a>
+                    <a class="h5 ml-3 font-weight-bold text-white" href="mailto:contact@smt-group.net">contact@smt-group.net</a>
                 </div>
 
                 <div class="fit-content py-3 col-xs-12">
                     <span class="h3"><i class="fab fa-facebook-messenger"></i></span>
-                    <a class="h5 ml-3 font-weight-bold text-white" href="#">me.smtgroup.facebook.com</a>
+                    <a class="h5 ml-3 font-weight-bold text-white" target="_blank" href="
+                    https://www.facebook.com/104972078267223/posts/317309377033491/">Smart Touch Group Sarl</a>
                 </div>
             </div>
         </div>

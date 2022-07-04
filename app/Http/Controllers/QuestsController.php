@@ -15,7 +15,7 @@ class QuestsController extends Controller
      */
     public function index()
     {
-        $faqs = Faqs::all();
+        $faqs = Faqs::paginate(5);
         return view('home.quest', compact('faqs'));
     }
 }

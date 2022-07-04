@@ -10,6 +10,7 @@
     <title>StudyUp | Accueil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
     html {
@@ -71,7 +72,8 @@
             </div>
         </main>
     </div>
-    <div class="container mt-1 mb-5 text-center">
+    <div class="container mt-1 mb-5 text-center" data-aos="fade-up"
+    data-aos-duration="3000">
         <div class="main" id="section2">
             <a href="#section1"></a>
         </div>
@@ -86,40 +88,34 @@
                 </g>
             </svg>
         </div>
-        <p class="mt-5 h5 font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+        <p class="mt-5 h5 font-weight-bold">Les textes littéraires et courants ont des contenus ouverts et variés. Les frontières entre les
+            catégories de livres s’en trouvent parfois perméables, appelant à une fusion des genres. C’est
+            pourquoi nous disposons d'un très large gamme de catégorie de livres vous offrant ainsi une meilleure expérience de lecture, De ce fait, les mots-clés
+            servent d’indication supplémentaire pour vous permettre d'obtenir aisément le livre souhaité.</p>
     </div>
     <div class="container mt-5 categories py-5 text-smt-tertiary">
         <div class="row">
             <ul class="col-md-8 col-12 border-width-3">
                 <li>
-                    <div class="mt-5">
+                    <div class="mt-5 " data-aos="fade-up"
+                    data-aos-duration="4000">
                         <h1 class="font-weight-bold">Roman</h1>
-                        <p class="mt-3 font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut laboreet dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="mt-3 font-weight-bold">Le roman est une œuvre littéraire en prose d’une certaine longueur mêlant le réel et l’imaginaire. Dans sa forme la plus traditionnelle, le roman cherche à susciter l’intérêt et le plaisir du lecteur en racontant le destin d’un héros principal, une intrigue entre plusieurs personnages...</p>
                     </div>
                 </li>
                 <li>
-                    <div class="mt-5">
-                        <h1 class="font-weight-bold">Sciences</h1>
-                        <p class="mt-3 font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut laboreet dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="mt-5" data-aos="fade-up"
+                    data-aos-duration="4000">
+                        <h1 class="font-weight-bold">Littérature Africaine</h1>
+                        <p class="mt-3 font-weight-bold">La modernité du roman négro-africain a ses figures tutélaires : Charles Nokan, Yambo Ouologuem, Ahmadou Kourouma, Valentin Mudimbe, Sony Labou Tansi etc.... Et sa définition : témoignage, engagement, mixité de l’oral et de l’écrit.L'ensemble de ces oeuvres expriment la culture africaine, l'identitité de l'africain.Les différents essais  constituent autant de lectures différentes mais qui ont parlent de l'identité africaine...</p>
                     </div>
                 </li>
                 <li>
-                    <div class="mt-5" id="section2">
+                    <div class="mt-5" id="section2" data-aos="fade-up"
+                    data-aos-duration="4000">
                         <h1 class="font-weight-bold">Développement personnel</h1>
-                        <p class="mt-3 font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut laboreet dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="mt-3 font-weight-bold">Les livres de développement personnel peuvent être une fantastique source d’inspiration pour changer de vie et atteindre ses objectifs.
+                            Ils sont variés et peuvent vous aider dans tous les aspects de votre vie. Ils vous permettent de réfléchir sereinement, et vous donnent les clés pour changer les choses afin d’atteindre vos objectifs, à votre rythme et selon la méthode adaptée à vos besoins.</p>
                     </div>
                 </li>
                 <li>
@@ -131,7 +127,8 @@
         </div>
     </div>
     <div class="container-fluid fonctionnement py-5" style="margin: 100px auto;">
-        <div class="container">
+        <div class="container" data-aos="fade-up"
+        data-aos-duration="3000">
             <div class="row justify-content-center mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="titleband text-center" viewBox="0 0 764.864 153.241">
                     <g id="Groupe_18" data-name="Groupe 18" transform="translate(-577.568 -1157.759)">
@@ -146,7 +143,8 @@
         </div>
         <div class="mt-5 mx-auto" style="width: 90%">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-body">
                             <div class="card-title d-inline-block">
@@ -154,51 +152,35 @@
                                 <h3 class="font-weight-bold d-inline">Création de compte</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                                Pour profiter pleinement de la plateforme StudyUp , vous devez avant tout créer un compte utilisateur que ce soit sur partie web ou mobile et proceder ensuite à votre identification.Nous vous recommmendons de bien vouloir Télecharger l'application mobile pour profiter au maximun.Bonne lecture !!!
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-body">
                             <div class="card-title d-inline-block">
                                 <h1 class="display-3 font-weight-bold p-0 d-inline">2.</h1>
-                                <h3 class="font-weight-bold d-inline">Abonnement</h3>
+                                <h3 class="font-weight-bold d-inline">Paiement</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                                StudyUp vous fournis une multitude de livres gratuits et dans plusieurs catégories distincts.Cela vous permet ainsi de profiter pleinement de la plateforme.Cependant , l'obtention de certains livres necessite un paiement et dans ce cas , vous devez simplement recharger votre compte pour ainsi bénéficier de votre livre.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-body">
                             <div class="card-title d-inline-block">
                                 <h1 class="display-3 font-weight-bold p-0 d-inline">3.</h1>
-                                <h3 class="font-weight-bold  d-inline">Partenariat</h3>
+                                <h3 class="font-weight-bold  d-inline">Lecture</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                                La plateforme StudyUp est conçue pour vous et selon vos besoins.Les différents livres peuvent être consultés en toute aisance et sont disponible également sous format audio.Ce qui permet d'écouter vos livres partout où que vous soyez.
                             </p>
                         </div>
                     </div>
@@ -207,14 +189,15 @@
         </div>
     </div>
     <div class="container-fluid" style="margin-top: 100px;">
-        <div class="container mb-5">
+        <div class="container mb-5" data-aos="fade-up"
+        data-aos-duration="3000">
             <div class="row justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="titleband text-center" viewBox="0 0 764.864 153.241">
                     <g id="Groupe_18" data-name="Groupe 18" transform="translate(-577.568 -1157.759)">
                         <rect id="up" data-name="Rectangle 4" width="761" height="124" transform="translate(577.568 1184.317) rotate(-2)" fill="rgba(2,172,240,0.25)" />
                         <rect id="down" data-name="Rectangle 5" width="761" height="124" transform="translate(581.896 1160.517) rotate(2)" fill="rgba(2,172,240,0.75)" />
-                        <text id="text" data-name="svg_text" class="h1 font-weight-bold" transform="translate(740 1250)" fill="#FFF" font-weight="700">
-                            <tspan x="0" y="0">Les avis de nos abonnés</tspan>
+                        <text id="text" data-name="svg_text" class="h1 font-weight-bold ml-4" transform="translate(740 1250)" fill="#FFF" font-weight="700">
+                            <tspan x="0" y="0">Les avis de nos lecteurs </tspan>
                         </text>
                     </g>
                 </svg>
@@ -222,7 +205,8 @@
         </div>
         <div class="container-fluid mx-auto" style="margin-top: 100px;">
             <div class="row justify-content-around opinions">
-                <div class="col-md-3 col-md-3-5 col-10 my-5">
+                <div class="col-md-3 col-md-3-5 col-10 my-5" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField1" class="py-2">
@@ -249,7 +233,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-md-3-5 col-10 my-5">
+                <div class="col-md-3 col-md-3-5 col-10 my-5" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField2" class="py-2">
@@ -276,7 +261,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-md-3-5 col-10 my-5">
+                <div class="col-md-3 col-md-3-5 col-10 my-5" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField3" class="py-2">
@@ -307,7 +293,8 @@
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up"
+        data-aos-duration="3000">
             <svg xmlns="http://www.w3.org/2000/svg" class="titleband mb-3 text-center" viewBox="0 0 764.864 153.241">
                 <g id="Groupe_18" data-name="Groupe 18" transform="translate(-577.568 -1157.759)">
                     <rect id="up" data-name="Rectangle 4" width="761" height="124" transform="translate(577.568 1184.317) rotate(-2)" fill="rgba(112,112,112,0.25)" />
@@ -317,14 +304,18 @@
                     </text>
                 </g>
             </svg>
-            <h3 class="font-weight-bold text-center text-smt-tertiary mt-5">Vous pouvez avoir l'application installable sous Android, iOS, tablette et en version web</h3>
+            <h3 class="font-weight-bold text-center text-smt-tertiary mt-5">Vous pouvez télécharger l'application version sous Android</h3>
         </div>
     </div>
     <div class="container-fluid mt-5 text-center multiplateform" style="padding-top: 150px; padding-bottom: 150px;">
-        <img src="{{asset('dist/img/footer-devices.png')}}" alt="Devices" class="w-75">
+        <img src="{{asset('dist/img/footer-device.png')}}" alt="Devices" class="w-75">
     </div>
     @include('layouts.footer')
     <script src="{{ asset('js/home.js') }}" type="module" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

@@ -10,8 +10,8 @@
             </div>
             <p class="text-muted text-justify mt-2 font-size-14">Smart Touch Group est une une entreprise de droit burkinabé de technologie avancée proposant des services innovants, futuristes, intelligents à ses client.</p>
             <div class="text-left">
-                <a href="#" class="h2 mr-4"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="h2 text-smt-primary"><i class="fab fa-twitter"></i></a>
+                <a href=" https://www.facebook.com/104972078267223/posts/317309377033491/" target="_blank" class="h2 mr-4"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/smartouchgroup" target="_blank" class="h2 text-smt-primary"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <ul class="nav flex-column  col-md-3">
@@ -30,16 +30,16 @@
         </ul>
         <ul class="nav flex-column col-md-3">
             <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="{{ route('home') }}">Accueil</a>
+              </li>
+            <li class="nav-item">
               <a class="nav-link font-weight-bold" href="{{ route('login.auth') }}">Se connecter</a>
             </li>
             <li class="nav-item">
               <a class="nav-link font-weight-bold" href="{{ route('register.auth') }}">Créer un compte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="https://www.smt-group.net">L'entreprise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">Politique de confidentialité</a>
+              <a class="nav-link font-weight-bold" target='_blank' href="https://www.smt-group.net">L'entreprise</a>
             </li>
         </ul>
     </div>

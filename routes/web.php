@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/download',[HomeController::class,'download'])->name('download');
 Auth::routes(['verify' => true]);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');

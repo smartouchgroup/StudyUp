@@ -30,8 +30,9 @@
                             </div>
                         </li>
                     </ul>
-                @endforeach
+                    @endforeach
+                </div>
+                {{ $faqs->links() }}
             </div>
-        </div>
     </section>
 @endsection
