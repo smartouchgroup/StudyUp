@@ -269,7 +269,10 @@
                                             Emails
                                         </th>
                                         <th style="width: 20%" class="text-center">
-                                            Date d'incription
+                                            Date d'inscription
+                                        </th>
+                                        <th style="width: 20%" class="text-center">
+                                            Solde
                                         </th>
                                     </tr>
                                 </thead>
@@ -286,8 +289,11 @@
                                             {{ $user->email }}
                                         </td>
                                         <th style="width: 20%" class="text-center">
-                                            {{ date('d-m-Y',strtotime($user->created_at )) }}
+                                            {{ date('d-M-Y',strtotime($user->created_at )) }}
                                         </th>
+                                        <td class="text-center">
+                                            {{ $user->account->amount }} Fcfa
+                                        </td>
                                         @empty
                                         <div class="alert alert-warning col-md-12 col-xs-12" role="alert">
                                             <p class='font-weight-bolder text-center '>
