@@ -23,12 +23,15 @@ use App\Http\Controllers\AproposController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ConditionController;
 use App\Http\Controllers\NotificationsController;
 use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/download',[HomeController::class,'download'])->name('download');
+Route::get('terms',[ConditionController::class,'terms'])->name('terms');
+Route::get('politique',[ConditionController::class,'politique'])->name('politique');
 Auth::routes(['verify' => true]);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
@@ -47,6 +50,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('language', LanguagesController::class);
     Route::resource('countrie', CountriesController::class);
     Route::resource('Faqs', FaqsController::class);
+    Route::resource('notifications', NotificationsController::class);
 
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
     Route::post('/deposit', [AccountController::class, 'store'])->name('account.store');
@@ -67,13 +71,11 @@ Route::get('a_propos', [AproposController::class, 'vue'])->name('a_propos');
 Route::resource('books', BooksController::class);
 //Routes Notifications
 
-Route::resource('notifications', NotificationsController::class);
 Route::get('/appHome', [AppController::class, 'index'])->name('app.index');
 Route::get('/app/show', [AppController::class, 'show']);
 Route::get('/app/bookShow/{id}', [AppController::class, 'bookShow'])->name('show');
 Route::post('/deconnexion', [AppController::class, 'deconnexion'])->name('deconnexion');
-// Route::get('/favoris',[FavorisController::class,'index'])->name('favoris.index');
-// Route::post('/favoris',[FavorisController::class,'store'])->name('favoris.store');
+
 
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post');

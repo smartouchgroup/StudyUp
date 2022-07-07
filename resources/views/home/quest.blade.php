@@ -4,7 +4,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Les Questions les plus Fréquents</h2>
+                <h2>Les Questions les plus Fréquentes</h2>
                 <p>
                     Smart Touch Group vous propose des produits futuristes dans le but de faciliter
                     votre quotidien en vous proposant des gadgets intelligents et commandés via téléphone

@@ -15,7 +15,7 @@ class FaqsController extends Controller
     public function index()
     {
         $faqs = Faqs::paginate(3);
-        return view('Faqs.faqs',compact('faqs'));
+        return view('faqs.faqs',compact('faqs'));
     }
 
 

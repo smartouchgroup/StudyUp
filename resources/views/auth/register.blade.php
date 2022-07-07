@@ -106,7 +106,7 @@
                             <div class="col-lg-8">
                                 <div class="my-2">
                                     <p class="text-center reduction-size font-weight-bold m-0">
-                                        En cliquant ci-dessous , vous acceptez les <a href="" class="text-smt-secondary">conditions de services</a> et la <a href="" class="text-smt-secondary">Politique de confidentialité</a> de StudyUp.
+                                        En cliquant ci-dessous , vous acceptez les <a href="{{ route('terms') }}" class="text-smt-secondary">conditions de services</a> et la <a href="{{ route('politique') }}" class="text-smt-secondary">Politique de confidentialité</a> de StudyUp.
                                     </p>
                                     <p class="text-center reduction-size font-weight-bold my-2">
                                      <a href="{{ route('login.index') }}"> Avez vous déjà un compte ? Veuillez vous connecter !!!</a>

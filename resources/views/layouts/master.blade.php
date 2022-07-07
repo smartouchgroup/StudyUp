@@ -140,7 +140,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ asset('Faqs') }}" class="nav-link">
+                            <a href="{{ route('Faqs.index') }}" class="nav-link">
                                 <i class="fa fa-question-circle" aria-hidden="true"></i>
                                 <p>
                                     Gestion FAQs

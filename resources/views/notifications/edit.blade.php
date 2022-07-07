@@ -16,7 +16,7 @@
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
-                    <label>Nom:</label>
+                    <label>Message:</label>
                     <input type="text" value="{{ $notifications->message }}" name="message" class="form-control">
                     <input type="hidden" name="notificationId" value="{{ $notifications->id }}">
                     {!! $errors->first('message', '<small class="text-danger">:message</small>') !!}

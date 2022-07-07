@@ -9,86 +9,86 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
-use App\User;
+use App\Models\User;
 
 use Illuminate\Support\Str;
 
 class ForgotPasswordController extends Controller
 {
-      /**
-       * Write code on Method
-       *
-       * @return response()
-       */
-      public function showForgetPasswordForm()
-      {
-         return view('auth.forgetPassword');
-      }
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function showForgetPasswordForm()
+    {
+        return view('auth.forgetPassword');
+    }
 
-      /**
-       * Write code on Method
-       *
-       * @return response()
-       */
-      public function submitForgetPasswordForm(Request $request)
-      {
-          $request->validate([
-              'email' => 'required|email|exists:users',
-          ]);
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function submitForgetPasswordForm(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+        ]);
 
-          $token = Str::random(64);
+        $token = Str::random(64);
+        DB::table('password_resets')->insert([
+            'email' => $request->email,
+            'token' => $token,
+            'created_at' => Carbon::now()
+        ]);
 
-          DB::table('password_resets')->insert([
-              'email' => $request->email,
-              'token' => $token,
-              'created_at' => Carbon::now()
-            ]);
+        Mail::send('email.forgetPassword', ['token' => $token], function ($message) use ($request) {
+            $message->to($request->email);
+            $message->subject('Reset Password');
+        });
 
-          Mail::send('email.forgetPassword', ['token' => $token], function($message) use($request){
-              $message->to($request->email);
-              $message->subject('Reset Password');
-          });
+        return back()->with('success', 'Un email de réinitialisation de votre mot de passe à été envoyé.Merci de verifier vos e-mails!!!');
+    }
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function showResetPasswordForm($token)
+    {
+        return view('auth.forgetPasswordLink', ['token' => $token]);
+    }
 
-          return back()->with('success', 'Un email de réinitialisation de votre mot de passe à été envoyé.Merci de verifier vos e-mail!!!');
-      }
-      /**
-       * Write code on Method
-       *
-       * @return response()
-       */
-      public function showResetPasswordForm($token) {
-         return view('auth.forgetPasswordLink', ['token' => $token]);
-      }
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function submitResetPasswordForm(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+            'password' => 'required|string|min:6|confirmed',
+            'password_confirmation' => 'required'
+        ]);
 
-      /**
-       * Write code on Method
-       *
-       * @return response()
-       */
-      public function submitResetPasswordForm(Request $request)
-      {
-          $request->validate([
-              'email' => 'required|email|exists:users',
-              'password' => 'required|string|min:6|confirmed',
-              'password_confirmation' => 'required'
-          ]);
+        $updatePassword = DB::table('password_resets')
+            ->where([
+                'email' => $request->email,
+                'token' => $request->token
+            ])
+            ->first();
 
-          $updatePassword = DB::table('password_resets')
-                              ->where([
-                                'email' => $request->email,
-                                'token' => $request->token
-                              ])
-                              ->first();
+        if (!$updatePassword) {
+            return back()->withInput()->with('error', 'Invalid token!');
+        }
 
-          if(!$updatePassword){
-              return back()->withInput()->with('error', 'Invalid token!');
-          }
+        $user = User::where('email', $request->email)
+            ->update(['password' => Hash::make($request->password)]);
 
-          $user = User::where('email', $request->email)
-                      ->update(['password' => Hash::make($request->password)]);
+        DB::table('password_resets')->where(['email' => $request->email])->delete();
 
-          DB::table('password_resets')->where(['email'=> $request->email])->delete();
-
-          return redirect('/login')->with('warning', 'Your password has been changed!');
-      }
+        return redirect('/login')->with('warning', 'Vous venez de changer votre mot de passe! Connecter vous');
+    }
 }

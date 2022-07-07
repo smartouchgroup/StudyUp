@@ -23,7 +23,7 @@ class CreateBooksTable extends Migration
             $table->integer('page');
             $table->unsignedBigInteger('auteur_id');
             $table->unsignedBigInteger('pays_id');
-            $table->integer('prix');
+            $table->integer('prix')->nullable();
             $table->string('photo')->nullable();
             $table->string('document');
 
