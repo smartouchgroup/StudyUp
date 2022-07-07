@@ -175,7 +175,7 @@
         </main>
 
         <footer class="main-footer">
-            <p class="font-weight-bold text-center">&copy;Copyright - SMART TOUCH GROUP - 2021</p>
+            <p class="font-weight-bold text-center">Copyright &copy; - SMART TOUCH GROUP - 2021</p>
         </footer>
         <aside class="control-sidebar control-sidebar-dark"></aside>
     </div>
@@ -193,7 +193,7 @@
     <script src="{{ asset('plugins/jquery-knob/jquery.knob.min.js') }}"></script>
     <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-    <script src="{{ asset('dist/js/demo.js') }}"></script>
+    {{-- <script src="{{ asset('dist/js/demo.js') }}"></script> --}}
     <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 
     {{-- lien pour la genration de datatable --}}
