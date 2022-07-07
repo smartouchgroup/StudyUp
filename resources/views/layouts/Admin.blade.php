@@ -316,7 +316,7 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <p class="font-weight-bold text-center">&copy;Copyright - SMART TOUCH GROUP - 2021</p>
+            <p class="font-weight-bold text-center">Copyright &copy; - SMART TOUCH GROUP - 2021</p>
         </footer>
 
         <!-- Control Sidebar -->

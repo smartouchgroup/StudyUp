@@ -16,6 +16,9 @@
                     </button>
                     <ul class="nav justify-content-end header-nav">
                         <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="{{ route('home') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link font-weight-bold" href="{{ asset('blog') }}">Blog</a>
                         </li>
                         <li class="nav-item">

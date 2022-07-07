@@ -78,7 +78,7 @@
                         data-accordion="false">
                         <li class="nav-item menu-open">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="{{ route('dashboard') }}" class="nav-link active">
                                 <i class="fa fa-book" aria-hidden="true"></i>
                                 <p>Gestion de bibliothèque</p>
                             </a>
