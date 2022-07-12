@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::post('/deposit',[AccountController::class,'store']);
     Route::get('categories',[AppController::class,'getCategories']);
     Route::get('payments',[paymentBookController::class,'index']); //recuperation des livres acheter
+    Route::delete('deletePayment/{id}',[paymentBookController::class,'deletePayment']);
     Route::get('account',[AccountController::class,'index']); //show my account
     Route::post('buyBook',[paymentBookController::class,'store']);//buy  book
     Route::post('favoris',[FavorisController::class,'store']); // ajout du livre gratuit a la bibliotheque

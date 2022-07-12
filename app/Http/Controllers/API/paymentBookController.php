@@ -16,7 +16,7 @@ class paymentBookController extends Controller
         $biblios = PaymentBook::where('user_id',Auth::user()->id)->get();
         return BiblioResource::collection($biblios);
     }
-    
+
 
     public function store(Request $request){
         $userAccountAmount = Account::where('user_id', Auth::user()->id)->first();
@@ -29,11 +29,16 @@ class paymentBookController extends Controller
                 'user_id' =>$request->user_id,
                 'book_id' => $request->book_id,
                 'price' => $request->price,
-                'status' => 1
             ]);
             Account::where('user_id', Auth::user()->id)->update(['amount' => $getAccountAmount -  $getBookPrice]);
             return response()->json(['message' => "Achat effectué avec succés"], 200);
         }
     }
+    public function deletePayment($id){
+        $deletePaymentBook = PaymentBook::find($id);
+        $deletePaymentBook->delete();
+        return response()->json(['message' => "Vous avez retiré ce livre"], 200);
+    }
+
 }
 

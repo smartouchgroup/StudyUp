@@ -83,7 +83,7 @@
                     <rect id="up" data-name="Rectangle 4" width="761" height="124" transform="translate(577.568 1184.317) rotate(-2)" fill="rgba(244,147,29,0.25)" />
                     <rect id="down" data-name="Rectangle 5" width="761" height="124" transform="translate(581.896 1160.517) rotate(2)" fill="rgba(244,147,29,0.75)" />
                     <text id="text" data-name="svg_text" class="h1 font-weight-bold" transform="translate(680 1250)" fill="#262160" font-weight="700">
-                        <tspan x="0" y="0">Des œuvres de toutes catégories ..</tspan>
+                        <tspan x="0" y="0">Des œuvres de toutes catégories</tspan>
                     </text>
                 </g>
             </svg>
@@ -210,11 +210,11 @@
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField1" class="py-2">
-                                <img src="{{asset('dist/img/student1.jpg')}}" alt="Djamila" class="w-50 rounded-circle">
+                                <img src="{{asset('dist/img/student2.jpg')}}" alt="Djamila" class="w-50 rounded-circle">
                             </div>
                             <div class="text-center ml-5 opinion_author_header">
-                                <h2 class="font-weight-bold">Djamila</h2>
-                                <span>Etudiante en informatique</span>
+                                <h2 class="font-weight-bold">Simon</h2>
+                                <span>Etudiant en lettre moderne</span>
                             </div>
                         </div>
                         <div class="card-body py-5" style="background: #f8f8f8;">
@@ -222,13 +222,9 @@
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                                c'est une application qui offre beaucoup de gamme de livre. De la fanfiction au roman d'aventure, en passant par la romance et les contenus humoristiques, il y en a pour tous les goûts.
+
+Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et agréables à lire.
                             </p>
                         </div>
                     </div>
@@ -238,11 +234,11 @@
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField2" class="py-2">
-                                <img src="{{asset('dist/img/student2.jpg')}}" alt="Abdel" class="w-50 rounded-circle">
+                                <img src="{{asset('dist/img/student3.jpg')}}" alt="Abdel" class="w-50 rounded-circle">
                             </div>
                             <div class="text-center ml-4 opinion_author_header">
-                                <h2 class="font-weight-bold">Abdel</h2>
-                                <span>Etudiante en marketing</span>
+                                <h2 class="font-weight-bold">Albert</h2>
+                                <span>Etudiant en marketing</span>
                             </div>
                         </div>
                         <div class="card-body py-5" style="background: #f8f8f8;">
@@ -250,13 +246,7 @@
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                                La prémière fois que j'ai utilisé cette application ,j'étais étonné de son riche contenu ainsi que de sa simplicité d'utilisation.Il ya en pour tous les goûts.J'ai également trouvé de supers documents relatifs à ma filière d'étude.Je le recommande vivement pour tous ceux passioné de la recherche.
                             </p>
                         </div>
                     </div>
@@ -266,11 +256,11 @@
                     <div class="card border-0 bg-transparent">
                         <div class="card-header border-0 py-2 d-flex justify-content-around">
                             <div id="profileField3" class="py-2">
-                                <img src="{{asset('dist/img/student3.jpg')}}" alt="Albert" class="w-50 rounded-circle">
+                                <img src="{{asset('dist/img/student1.jpg')}}" alt="Albert" class="w-50 rounded-circle">
                             </div>
                             <div class="text-center ml-2 opinion_author_header">
-                                <h2 class="font-weight-bold">Albert</h2>
-                                <span>Etudiante en droit</span>
+                                <h2 class="font-weight-bold">Djamila</h2>
+                                <span>Juriste</span>
                             </div>
                         </div>
                         <div class="card-body py-5" style="background: #f8f8f8;">
@@ -278,13 +268,7 @@
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                                Sed ut perspiciatis, unde omnis iste
-                                natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam
-                                eaque ipsa, quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt.
-                                Nemo enim ipsam voluptatem, quia voluptas
-                                sit,aspernatur aut odit aut fugit
+                               Étant une grande lectrice ce site apporte beaucoup de choix de lecture et offre beaucoup de fonctionnalités.je la recommande pour les amoureux de la recherche et de la lecture.Vous y trouverez votre compte.
                             </p>
                         </div>
                     </div>
@@ -304,7 +288,7 @@
                     </text>
                 </g>
             </svg>
-            <h3 class="font-weight-bold text-center text-smt-tertiary mt-5">Vous pouvez télécharger l'application version sous Android</h3>
+            <h3 class="font-weight-bold text-center text-smt-tertiary mt-5">Vous pouvez télécharger l'application sous la version ios/Android</h3>
         </div>
     </div>
     <div class="container-fluid mt-5 text-center multiplateform" style="padding-top: 150px; padding-bottom: 150px;">

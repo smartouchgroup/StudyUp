@@ -9,9 +9,14 @@
                 Télécharger maintenant !!!
             </h2>
             <div class="text-center my-3">
-                <a href="">
+                <a href="" class="mr-2">
                     <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
                         <i class="fab fa-google-play"></i> GOOGLE PLAY
+                    </button>
+                </a>
+                <a href="">
+                    <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
+                        <i class="fab fa-app-store"></i> APP STORE
                     </button>
                 </a>
             </div>

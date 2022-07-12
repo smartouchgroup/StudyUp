@@ -18,7 +18,6 @@ class CreatePaymentBooksTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('book_id');
             $table->integer('price')->default(0);
-            $table->boolean('status');
 
             $table->foreign('user_id')
             ->references('id')
