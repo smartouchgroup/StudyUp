@@ -1,3 +1,4 @@
+<title> Contacter | StudyUp </title>
 @extends('layouts.layout')
 @section('content')
 <div class="text-center mb-5 ">

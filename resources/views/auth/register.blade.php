@@ -1,3 +1,4 @@
+<title>Inscription | {{ config('app.name') }}</title>
 @extends('layouts.auth')
 
 @section('content')

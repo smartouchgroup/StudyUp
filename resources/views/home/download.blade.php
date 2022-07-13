@@ -1,3 +1,4 @@
+<title> Télécharger | StudyUp </title>
 @extends('layouts.layout')
 @section('content')
     <section id="download" class="faq">
@@ -10,7 +11,7 @@
             </h2>
             <div class="text-center my-3">
                 <span class="mx-5">
-                    <img src="{{ asset('image/qr-code_appstore.png') }}" alt="" width="125px" height="125px">
+                    <img src="{{ asset('image/qr-code_appstore.png') }}" alt="" width="125px" height="125px" class="ecart">
                 </span>
 
                 <span class="mr-2">

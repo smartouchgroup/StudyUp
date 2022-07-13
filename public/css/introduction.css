@@ -387,6 +387,12 @@ a[href="/eye"]:hover {
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
+    .multiplateform .footer-device {
+        height: 200px !important;
+    }
+    .ecart {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -600,6 +606,10 @@ a[href="/eye"]:hover {
     .text-md-right,
     input {
         font-size: medium;
+    }
+    .ecart {
+        margin-bottom: 25px;
+        margin-left: -3px;
     }
 }
 

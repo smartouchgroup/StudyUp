@@ -1,3 +1,4 @@
+<title>Blog | StudyUp </title>
 @extends('layouts.layout')
 @section('content')
 <div class="container">

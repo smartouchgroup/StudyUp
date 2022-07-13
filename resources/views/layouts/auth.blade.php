@@ -6,9 +6,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <meta name="description" content="StudyUp est une plateforme de lecture en version android et ios où vous trouverez tous les livres dont vous aurez besoins pour vos detentes ou vos recherches et ceux dans plusieurs domaines">
+    <meta name="keywords" content="StudyUp, livre, document, communication, stratégie marketing, développement personnel, web, mobile, android, ios, Smart Touch Group,Burkina Faso">
+    <meta property="og:title" content="StudyUp | Plateforme de lecture |  sites web et app mobile | android , ios">
+    <meta name="author" content="Smart_Touch_Group">
 
     <title>{{ config('app.name') }}</title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
 </head>

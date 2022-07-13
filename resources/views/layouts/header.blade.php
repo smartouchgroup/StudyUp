@@ -65,10 +65,10 @@ aria-hidden="true">
         <div class="modal-body row">
 
             <div class="col-6 mx-auto text-center">
-                <img src="{{ asset('image/qr-code_appstore.png') }}" alt=""
+                <img src="{{ asset('image/qr-code_appstore.png') }}" alt="" class="ecart"
                     width="50%">
             </div>
-            <div class="col-6 mx-auto text-center">
+            <div class="col-6 mx-auto text-center ">
                 <img src="{{ asset('image/qr-code_playstore.png') }}" alt=""
                     width="50%">
             </div>
@@ -82,7 +82,6 @@ aria-hidden="true">
                     <i class="fab fa-google-play"></i> GOOGLE PLAY
                 </button>
             </div>
-
         </div>
     </div>
 </div>

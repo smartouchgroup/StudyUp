@@ -7,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>StudyUp | Accueil</title>
+    <title> Accueil | StudyUp</title>
+    <meta name="description" content="StudyUp est une plateforme de lecture en version android et ios où vous trouverez tous les livres dont vous aurez besoins pour vos detentes ou vos recherches et ceux dans plusieurs domaines">
+    <meta name="keywords" content="StudyUp, livre, document, communication, stratégie marketing, développement personnel, web, mobile, android, ios, Smart Touch Group,Burkina Faso">
+    <meta property="og:title" content="StudyUp | Plateforme de lecture |  sites web et app mobile | android , ios">
+    <meta name="author" content="Smart_Touch_Group">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset('css/introduction.css') }}" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -291,7 +295,7 @@ Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et
         </div>
     </div>
     <div class="container-fluid mt-5 text-center multiplateform" style="padding-top: 150px; padding-bottom: 150px;">
-        <img src="{{asset('dist/img/footer-device.png')}}" alt="Devices" class="w-75" height="490px">
+        <img src="{{asset('dist/img/footer-device.png')}}" alt="Devices" class="w-75 h-auto" height="490px">
     </div>
     @include('layouts.footer')
     <script src="{{ asset('js/home.js') }}" type="module" defer></script>

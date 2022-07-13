@@ -1,3 +1,4 @@
+<title> Faqs | StudyUp</title>
 @extends('layouts.layout')
 @section('content')
     <section id="faq" class="faq">
