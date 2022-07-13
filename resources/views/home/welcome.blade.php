@@ -41,10 +41,10 @@
                     <div class="text col-md-5 mt-5 text-white">
                         <h1 class="display-4 font-weight-bold">Cultivez-vous de n'importe où que vous vous trouvez!</h1>
                         <p class="h4 font-weight-bold my-5">Roman, œuvres pédagogiques, etc. Retrouvez tout ce
-                            dont vous avez besoin de lire sur notre plateforme.
+                            dont vous avez besoin de lire sur notre plateforme. <br>
                             Téléchargez notre application mobile ou créer un
-                            compte en ligne :</p>
-                        <div class="fit-content d-flex flex-column justify-content-between">
+                            compte en ligne:</p>
+                        <div class="fit-content d-flex flex-column justify-content-between ">
                             <div class="downloadBtns fit-content">
                                 <a href="#" class="android bg-smt-tertiary text-smt-primary rounded-left text-decoration-none">
                                     <i class="fab fa-android"></i>
@@ -83,14 +83,14 @@
                     <rect id="up" data-name="Rectangle 4" width="761" height="124" transform="translate(577.568 1184.317) rotate(-2)" fill="rgba(244,147,29,0.25)" />
                     <rect id="down" data-name="Rectangle 5" width="761" height="124" transform="translate(581.896 1160.517) rotate(2)" fill="rgba(244,147,29,0.75)" />
                     <text id="text" data-name="svg_text" class="h1 font-weight-bold" transform="translate(680 1250)" fill="#262160" font-weight="700">
-                        <tspan x="0" y="0">Des œuvres de toutes catégories</tspan>
+                        <tspan x="0" y="0">Des œuvres de tous les domaines</tspan>
                     </text>
                 </g>
             </svg>
         </div>
-        <p class="mt-5 h5 font-weight-bold">Les textes littéraires et courants ont des contenus ouverts et variés. Les frontières entre les
-            catégories de livres s’en trouvent parfois perméables, appelant à une fusion des genres. C’est
-            pourquoi nous disposons d'un très large gamme de catégorie de livres vous offrant ainsi une meilleure expérience de lecture, De ce fait, les mots-clés
+        <p class="mt-5 h5 font-weight-bold">Les textes littéraires et courants ont des contenus ouverts et variés. Les frontières entre les différentes
+            catégories de livres s’en trouvent parfois perméables, appelant à une fusion des genres etc...C’est
+            pourquoi nous disposons d'une très large gamme de catégorie de livres vous offrant ainsi une meilleure expérience de lecture.De ce fait, les mots-clés
             servent d’indication supplémentaire pour vous permettre d'obtenir aisément le livre souhaité.</p>
     </div>
     <div class="container mt-5 categories py-5 text-smt-tertiary">
@@ -99,15 +99,15 @@
                 <li>
                     <div class="mt-5 " data-aos="fade-up"
                     data-aos-duration="4000">
-                        <h1 class="font-weight-bold">Roman</h1>
-                        <p class="mt-3 font-weight-bold">Le roman est une œuvre littéraire en prose d’une certaine longueur mêlant le réel et l’imaginaire. Dans sa forme la plus traditionnelle, le roman cherche à susciter l’intérêt et le plaisir du lecteur en racontant le destin d’un héros principal, une intrigue entre plusieurs personnages...</p>
+                        <h1 class="font-weight-bold">Stratégie marketing</h1>
+                        <p class="mt-3 font-weight-bold">Il est essentiel pour toute entreprise, petite ou grande, de disposer d'une présentation de sa stratégie de marketing. Elle constitue le plan de base que l'entreprise utilisera pour attirer des clients et vendre son produit. Une entreprise diversifiée a besoin de plusieurs stratégies de marketing, chacune pour un produit différent destiné à un marché différent...</p>
                     </div>
                 </li>
                 <li>
                     <div class="mt-5" data-aos="fade-up"
                     data-aos-duration="4000">
-                        <h1 class="font-weight-bold">Littérature Africaine</h1>
-                        <p class="mt-3 font-weight-bold">La modernité du roman négro-africain a ses figures tutélaires : Charles Nokan, Yambo Ouologuem, Ahmadou Kourouma, Valentin Mudimbe, Sony Labou Tansi etc.... Et sa définition : témoignage, engagement, mixité de l’oral et de l’écrit.L'ensemble de ces oeuvres expriment la culture africaine, l'identitité de l'africain.Les différents essais  constituent autant de lectures différentes mais qui ont parlent de l'identité africaine...</p>
+                        <h1 class="font-weight-bold">Littérature </h1>
+                        <p class="mt-3 font-weight-bold">La littérature est l’ensemble des œuvres écrites ou orales auxquelles on reconnaît une valeur esthétique. Grâce aux productions littéraires, elle permet de manifester des émotions et de révéler aux lecteurs ou aux auditeurs ce qu'une personne a dans le cœur.Laissez vous donc  emporter dans un univers constitué de plusieurs catégories de littérature selon vos appréciations ...</p>
                     </div>
                 </li>
                 <li>
@@ -152,7 +152,7 @@
                                 <h3 class="font-weight-bold d-inline">Création de compte</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                Pour profiter pleinement de la plateforme StudyUp , vous devez avant tout créer un compte utilisateur que ce soit sur partie web ou mobile et proceder ensuite à votre identification.Nous vous recommmendons de bien vouloir Télecharger l'application mobile pour profiter au maximun.Bonne lecture !!!
+                                Pour profiter pleinement de la plateforme StudyUp, vous devez avant tout créer un compte utilisateur que ce soit sur la partie web ou mobile et procéder ensuite à votre identification. Nous vous recommmendons de bien vouloir télécharger l'application mobile pour profiter au maximun. Bonne lecture !!!
                             </p>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                                 <h3 class="font-weight-bold d-inline">Paiement</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                StudyUp vous fournis une multitude de livres gratuits et dans plusieurs catégories distincts.Cela vous permet ainsi de profiter pleinement de la plateforme.Cependant , l'obtention de certains livres necessite un paiement et dans ce cas , vous devez simplement recharger votre compte pour ainsi bénéficier de votre livre.
+                                StudyUp vous fournit une multitude de livres gratuits et dans plusieurs domaines distincts. Cela vous permet ainsi de profiter pleinement de la plateforme. Cependant, l'obtention de certains livres necessite un paiement et dans ce cas, vous devez simplement recharger votre compte pour ainsi bénéficier de votre livre.
                             </p>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                 <h3 class="font-weight-bold  d-inline">Lecture</h3>
                             </div>
                             <p class="card-text font-weight-bold">
-                                La plateforme StudyUp est conçue pour vous et selon vos besoins.Les différents livres peuvent être consultés en toute aisance et sont disponible également sous format audio.Ce qui permet d'écouter vos livres partout où que vous soyez.
+                                La plateforme StudyUp est conçue pour vous et selon vos besoins. Les différents livres peuvent être consultés en toute aisance et sont disponibles également sous format audio. Ce qui permet d'écouter vos livres partout où que vous soyez.
                             </p>
                         </div>
                     </div>
@@ -222,8 +222,7 @@
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                                c'est une application qui offre beaucoup de gamme de livre. De la fanfiction au roman d'aventure, en passant par la romance et les contenus humoristiques, il y en a pour tous les goûts.
-
+                                C'est une application qui offre beaucoup de gamme de livre. De la fanfiction au roman d'aventure, en passant par la romance et les contenus humoristiques, il y en a pour tous les goûts.
 Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et agréables à lire.
                             </p>
                         </div>
@@ -246,7 +245,7 @@ Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                                La prémière fois que j'ai utilisé cette application ,j'étais étonné de son riche contenu ainsi que de sa simplicité d'utilisation.Il ya en pour tous les goûts.J'ai également trouvé de supers documents relatifs à ma filière d'étude.Je le recommande vivement pour tous ceux passioné de la recherche.
+                                La prémière fois que j'ai utilisé cette application, j'étais étonné de son riche contenu ainsi que de sa simplicité d'utilisation. Il ya en pour tous les goûts. J'ai également trouvé de supers documents relatifs à ma filière d'étude.Je la recommande vivement pour tous ceux passionné de la recherche.
                             </p>
                         </div>
                     </div>
@@ -268,7 +267,7 @@ Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et
                                 <i class="fas fa-quote-right"></i>
                             </div>
                             <p class="card-text">
-                               Étant une grande lectrice ce site apporte beaucoup de choix de lecture et offre beaucoup de fonctionnalités.je la recommande pour les amoureux de la recherche et de la lecture.Vous y trouverez votre compte.
+                               Étant une grande lectrice, ce site apporte beaucoup de choix de lecture et offre beaucoup de fonctionnalités.je la recommande pour les amoureux de la recherche et de la lecture. Vous y trouverez votre compte.
                             </p>
                         </div>
                     </div>
@@ -288,11 +287,11 @@ Il suffit d'un peu fouiller pour trouver de très bonnes histoires originales et
                     </text>
                 </g>
             </svg>
-            <h3 class="font-weight-bold text-center text-smt-tertiary mt-5">Vous pouvez télécharger l'application sous la version ios/Android</h3>
+            <h3 class="font-weight-bold text-center  mt-5"><a href="" class="text-smt-tertiary text-decoration-none">Vous pouvez télécharger l'application sous la version ios/Android</a></h3>
         </div>
     </div>
     <div class="container-fluid mt-5 text-center multiplateform" style="padding-top: 150px; padding-bottom: 150px;">
-        <img src="{{asset('dist/img/footer-device.png')}}" alt="Devices" class="w-75">
+        <img src="{{asset('dist/img/footer-device.png')}}" alt="Devices" class="w-75" height="490px">
     </div>
     @include('layouts.footer')
     <script src="{{ asset('js/home.js') }}" type="module" defer></script>

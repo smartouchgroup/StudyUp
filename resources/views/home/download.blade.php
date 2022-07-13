@@ -3,23 +3,21 @@
     <section id="download" class="faq">
         <div class="container">
             <h5 class="font-weight-bold text-center text-white mb-2">
-                Pour une meilleure expérience utlisateur, nous vous recommendons de télécharger la version mobile de StudyUp
+                Pour une meilleure expérience utilisateur, nous vous recommendons de télécharger la version mobile de StudyUp
             </h5>
             <h2 class="text-center mt-2 font-bold">
-                Télécharger maintenant !!!
+                Scannez le code Qr maintenant !!!
             </h2>
             <div class="text-center my-3">
-                <a href="" class="mr-2">
-                    <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
-                        <i class="fab fa-google-play"></i> GOOGLE PLAY
-                    </button>
-                </a>
-                <a href="">
-                    <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
-                        <i class="fab fa-app-store"></i> APP STORE
-                    </button>
-                </a>
+                <span class="mx-5">
+                    <img src="{{ asset('image/qr-code_appstore.png') }}" alt="" width="125px" height="125px">
+                </span>
+
+                <span class="mr-2">
+                    <img src="{{ asset('image/qr-code_playstore.png') }}" alt="" width="125px" height="125px">
+                </span>
             </div>
+
         </div>
     </section>
 @endsection

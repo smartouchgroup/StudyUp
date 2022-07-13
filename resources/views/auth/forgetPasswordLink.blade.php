@@ -18,7 +18,14 @@
                     <div class="card">
                         <div class="card-header font-weight-bold">Réinitialisation mot de passe</div>
                         <div class="card-body">
-
+                            @if($message = Session::get('warning'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{$message}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            @endif
                             <form action="{{ route('reset.password.post') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="token" value="{{ $token }}">
@@ -55,7 +62,7 @@
 
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary  font-weight-bold">
-                                        Renitialiser mot de passe
+                                        Réinitialiser mot de passe
                                     </button>
                                 </div>
                             </form>

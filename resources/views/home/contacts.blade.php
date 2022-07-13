@@ -17,10 +17,10 @@
         <div class="card-body  p-0 row ">
             <div class="fit-content d-block p-5 col-lg-6 col-md-6 col-xs-12">
                 <h4 class="mb-5 font-weight-bold text-smt-tertiary">Nous envoyer un email</h4>
-                <form action="{{ route('message.store') }}" method="post" class="contacts  ">
+                <form action="{{ route('message.store') }}" method="post" class="contacts ml-3 ">
                     @csrf
-                    <div class="form-group border rounded">
-                        <input type="text" name="name" placeholder="Votre nom" required class="text-indent-3">
+                    <div class="form-group border rounded ">
+                        <input type="text" name="name" placeholder="Votre nom" required class="text-indent-3 ">
                         {!! $errors->first('name', '<small class="text-danger">:message</small>') !!}
                     </div>
                     <div class="form-group border rounded">
@@ -31,15 +31,14 @@
                         <textarea name="message" placeholder="Votre message ..." class="text-indent-3 rounded border"></textarea>
                         {!! $errors->first('message', '<small class="text-danger">:message</small>') !!}
                     </div>
-                    <button type="submit" class="form-control mx-3 mt-3 bg-smt-secondary font-weight-bold text-white">Envoyer</button>
+                    <button type="submit" class="form-control mt-4  bg-smt-secondary font-weight-bold text-white" >Envoyer</button>
                 </form>
             </div>
             <div class="bg-smt-primary p-5 text-white col-lg-6 col-md-6 col-xs-12">
                 <h4 class="mb-5 font-weight-bold text-smt-tertiary text-white">Nous contacter autrement</h4>
                 <div class="fit-content py-3 col-xs-12">
                     <span class="h3"><i class="fas fa-phone-alt"></i></span>
-                    <a class="h5 ml-3 font-weight-bold text-white" href="tel:0022655026262">+226 55 02 62 62 / 53 02 62 62</a>
-
+                    <a class="h5 ml-3 font-weight-bold text-white" href="tel:0022655026262">+226 55 02 62 62 /<a class="h5  font-weight-bold text-white"   href="tel:0022653026262"> 53 02 62 62</a></a>
                 </div>
 
                 <div class="fit-content py-3 col-xs-12">
@@ -50,7 +49,7 @@
                 <div class="fit-content py-3 col-xs-12">
                     <span class="h3"><i class="fab fa-facebook-messenger"></i></span>
                     <a class="h5 ml-3 font-weight-bold text-white" target="_blank" href="
-                    https://www.facebook.com/104972078267223/posts/317309377033491/">Smart Touch Group Sarl</a>
+                    https://www.facebook.com/messages/t/17846176796706444/">Smart Touch Group Sarl</a>
                 </div>
             </div>
         </div>

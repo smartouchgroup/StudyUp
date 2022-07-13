@@ -31,11 +31,13 @@
                             <a class="nav-link font-weight-bold" href="{{ asset('contacts') }}">Contacter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold" href="{{ route('download') }}">Télécharger</a>
+                            <a class="nav-link font-weight-bold" href="{{ route('download') }}" data-toggle="modal"
+                                data-target="#exampleModal">Télécharger</a>
                         </li>
                         @if (Auth::check())
                             <li class="nav-item">
-                                <a class="nav-link font-weight-bold" href="{{ route('deconnexion') }}">Deconnexion</a>
+                                <a class="nav-link font-weight-bold"
+                                    href="{{ route('deconnexion') }}">Deconnexion</a>
                             </li>
                         @endif
                     </ul>
@@ -43,4 +45,45 @@
             </div>
         </header>
     </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalLabel">Pour une meilleure
+                expérience utilisateur, nous vous recommendons de télécharger la version
+                mobile de StudyUp</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <h6 class="text-center mt-3">
+            Veuillez scanner le code Qr
+        </h6>
+        <div class="modal-body row">
+
+            <div class="col-6 mx-auto text-center">
+                <img src="{{ asset('image/qr-code_appstore.png') }}" alt=""
+                    width="50%">
+            </div>
+            <div class="col-6 mx-auto text-center">
+                <img src="{{ asset('image/qr-code_playstore.png') }}" alt=""
+                    width="50%">
+            </div>
+            <div class="col-6 mx-auto text-center">
+                <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
+                    <i class="fab fa-app-store"></i> APP STORE
+                </button>
+            </div>
+            <div class="col-6 mx-auto text-center">
+                <button class="btn bg-smt-secondary font-weight-bold text-white px-3">
+                    <i class="fab fa-google-play"></i> GOOGLE PLAY
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
 </div>

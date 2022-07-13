@@ -10,7 +10,7 @@
             </div>
             <p class="text-muted text-justify mt-2 font-size-14">Smart Touch Group est une entreprise de droit burkinabé de technologie avancée proposant des services innovants, futuristes, intelligents à ses clients.</p>
             <div class="text-left">
-                <a href=" https://www.facebook.com/104972078267223/posts/317309377033491/" target="_blank" class="h2 "><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/smartouchgroup" target="_blank" class="h2 "><i class="fab fa-facebook"></i></a>
                 <a href="https://twitter.com/smartouchgroup" target="_blank" class="h2 text-smt-primary"><i class="fab fa-twitter mx-2"></i></a>
                 <a href="https://www.instagram.com/smartouchgroup1/" target="_blank" class="h2 text-smt-primary"><i class="fab fa-instagram"></i></a>
             </div>
@@ -45,6 +45,6 @@
         </ul>
     </div>
     <div class="mt-5">
-        <p class="font-weight-bold">Copyright &copy; - SMARTTOUCHGROUP - 2021</p>
+        <p class="font-weight-bold">Tous droits réservés. Copyright © 2021-2022 StudyUp by <a href="https://smt-group.net/" class="text-decoration-none" target="_blank">Smart Touch Group</a></p>
     </div>
 </footer>
