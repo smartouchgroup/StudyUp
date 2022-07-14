@@ -34,10 +34,10 @@
 
                 <p class="my-2">
                     Qui sommes-nous ?
-                    L’adresse de notre site Web est : <a href="https://ww.StudyUp.com"
+                    L’adresse de notre site Web est : <a href="https://www.StudyUp.com"
                         class="font-weight-bold font-size-20">WWW.StudyUp.com</a>
                 </p>
-                <ul>
+                <ul  class="list-unstyled">
                     <li>
                         <h4 class="font-weight-bold mb-2">
                             1- Objet
