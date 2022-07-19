@@ -26,7 +26,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConditionController;
 use App\Http\Controllers\NotificationsController;
 use Illuminate\Support\Facades\Auth;
-
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/download',[HomeController::class,'download'])->name('download');
@@ -39,7 +39,19 @@ Route::post('/login', [LoginController::class, 'authenticate'])->name('login.aut
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.auth');
 
+
 Route::group(['middleware' => ['auth']], function () {
+    //Gestion d'administrateur
+    Route::get('desactivate/{id}', [DashboardController::class, 'desactivate'])->name('desactivate');
+    Route::get('removeManager/{id}',[DashboardController::class,'removeManager'])->name('removeManager');
+    Route::get('activate/{id}', [DashboardController::class, 'activate'])->name('activate');
+    Route::get('profile', [DashboardController::class, 'profile'])->name('profile');
+    Route::post('changeData',[DashboardController::class,'changeData'])->name('changeData');
+    Route::post('changeEmail',[DashboardController::class,'changeEmail'])->name('changeEmail');
+    Route::post('changePassword',[DashboardController::class,'changePassword'])->name('changePassword');
+    Route::get('deleteManager/{id}',[DashboardController::class,'deleteManager'])->name('delete.manager');
+    Route::get('manageAdmin', [DashboardController::class, 'manageAdmin'])->name('manageAdmin');
+    Route::post('addManager',[DashboardController::class,'addManager'])->name('addManager');
     Route::get('/admin', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/deconnexion', [HomeController::class, 'deconnexion']);
     // CRUDs admin

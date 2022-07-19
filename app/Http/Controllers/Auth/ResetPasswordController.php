@@ -19,10 +19,10 @@ class ResetPasswordController extends Controller
     public function email(Request $request) {
         $request->session()->put([
                 'confirmation_data_exist' => true,
-                'title' => "Mail de renitialisation envoyé!",
+                'title' => "E-mail de réinitialisation envoyé!",
                 'body' => [
-                    0 => "Nous venons de vous envoyer un mail de renitialisation!",
-                    1 => "Vueillez consulter votre boite mail puis cliquer sur le lien pour renitialiser votre mot de passe."
+                    0 => "Nous venons de vous envoyer un e-mail de rénitialisation!",
+                    1 => "Veuillez consulter votre boite e-mail puis cliquer sur le lien pour réinitialiser votre mot de passe."
                 ],
             ]);
         return redirect()->intended($this->confirmation);

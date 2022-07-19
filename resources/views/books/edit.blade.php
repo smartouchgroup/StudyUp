@@ -51,7 +51,7 @@
                                         <label for="inputStatus">Catégories</label>
                                         <select id="inputStatus" name="categorie_id" class="form-control custom-select">
                                             @foreach($categories as $categorie)
-                                            <option selected value="{{ $categorie->id }}">{{ $categorie->categorie }}
+                                            <option  value="{{ $categorie->id }}">{{ $categorie->categorie }}
                                             </option>
                                             @endforeach
                                         </select>
@@ -60,7 +60,7 @@
                                         <label for="inputStatus">Editeur</label>
                                         <select id="inputStatus" name="editeur_id" class="form-control custom-select">
                                             @foreach($editors as $editor)
-                                            <option selected value="{{ $editor->id }}">{{ $editor->nom}}</option>
+                                            <option  value="{{ $editor->id }}">{{ $editor->nom}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -68,7 +68,7 @@
                                         <label for="inputStatus">langue</label>
                                         <select id="inputStatus" name="langue_id" class="form-control custom-select">
                                             @foreach($languages as $language)
-                                            <option selected value="{{ $language->id }}">{{ $language->langue}}</option>
+                                            <option  value="{{ $language->id }}">{{ $language->langue}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -89,7 +89,7 @@
                                     <label for="inputStatus">Auteur</label>
                                     <select id="inputStatus" name="auteur_id" class="form-control custom-select">
                                         @foreach($authors as $author)
-                                        <option selected value="{{ $author->id }}">{{ $author->nom}}
+                                        <option  value="{{ $author->id }}">{{ $author->nom}}
                                             {{ $author->prenom}}</option>
                                         @endforeach
                                     </select>
@@ -98,7 +98,7 @@
                                     <label for="inputStatus">Pays</label>
                                     <select id="inputStatus" name="pays_id" class="form-control custom-select">
                                         @foreach($countries as $countrie)
-                                        <option selected value="{{ $countrie->id }}">{{ $countrie->pays}}</option>
+                                        <option  value="{{ $countrie->id }}">{{ $countrie->pays}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -160,7 +160,7 @@
                                             <label for="">Ajouter un document</label>
                                         </div>
                                         <div class="card">
-                                            <input class="input bg-white-50" type="file" name="document" required value="" accept="pdf" >
+                                            <input class="input bg-white-50" type="file" name="document" required value="{{ $books->document }}" accept="pdf" >
                                             {!! $errors->first('document', '<small
                                             class="text-danger">:message</small>') !!}
                                         </div>

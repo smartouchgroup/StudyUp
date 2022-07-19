@@ -51,13 +51,19 @@ class LoginController extends Controller
             'password' => ['required']
         ]);
         $recuperation = DB::select('select role_id  from users where email=?', [$request->input('email')]);
+        $getStatus = DB::select('select status  from users where email=?', [$request->input('email')]);
         if (Auth::attempt($credentials) && $recuperation[0]->role_id == 1) {
             $request->session()->regenerate();
             return redirect()->intended('/admin');
-        } elseif (Auth::attempt($credentials) && $recuperation[0]->role_id == 2) {
+        } elseif (Auth::attempt($credentials) && $recuperation[0]->role_id == 2 && $getStatus[0]->status == true) {
             $request->session()->regenerate();
             return redirect()->route('download');
-        }  else {
+        }elseif (Auth::attempt($credentials) && $recuperation[0]->role_id == 2 && $getStatus[0]->status == false){
+            return back()->with('warning', "Votre compte a été desactivé");
+        } elseif (Auth::attempt($credentials) && $recuperation[0]->role_id == 3) {
+            $request->session()->regenerate();
+            return redirect()->intended('/admin');
+        }  else  {
             return back()->with('warning', "L'un des champs entré est incorrect!");
         }
     }

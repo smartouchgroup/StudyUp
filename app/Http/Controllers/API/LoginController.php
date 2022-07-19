@@ -24,6 +24,8 @@ class LoginController extends Controller
             return response()->json(['error' => "Vos identifiants sont incorrects"], 401);
         } else if ((int) Auth::user()->role_id !== 2) {
             return response()->json(['error' => "Accès non autorisé!"], 401);
+        } else if (Auth::user()->status == false) {
+            return response()->json(['error' => "Votre compte a été désactivé"], 401);
         }
 
         $token = auth()->user()->createToken('auth_token');

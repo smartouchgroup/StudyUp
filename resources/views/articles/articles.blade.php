@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="card-body p-0">
-                <table class="table table-striped projects">
+                <table class="table table-striped projects table-responsive">
                     <thead>
                         <tr>
                             <th style="width: 20%" class="text-center">
@@ -144,7 +144,7 @@
                             </td>
                             <td class="  d-flex justify-content-around my-4">
                                 <a href="{{ route('articles.edit',$article->id) }}">
-                                    <button class="btn btn-info btn-sm " type="button">
+                                    <button class="btn btn-info btn-sm ecart_responsive" type="button">
                                         Editer
                                     </button>
                                 </a>

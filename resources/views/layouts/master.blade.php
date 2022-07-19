@@ -9,8 +9,7 @@
         href="{{ asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback') }}">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">}
+    <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     {{-- lien pour datatable --}}
     <link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css') }}">
 
@@ -31,6 +30,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -155,6 +155,24 @@
                                 </p>
                             </a>
                         </li>
+                        @if (Auth::user()->role_id == 1)
+                        <li class="nav-item">
+                            <a href="{{ route('manageAdmin') }}" class="nav-link">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <p>
+                                    Gestion d'administrateurs
+                                </p>
+                            </a>
+                        </li>
+                    @endif
+                    <li class="nav-item">
+                        <a href="{{ route('profile') }}" class="nav-link">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>
+                               Profil
+                            </p>
+                        </a>
+                    </li>
                         <li class="nav-item">
                             <a href="{{ route('adminIndex') }}" class="nav-link">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -175,10 +193,13 @@
         </main>
 
         <footer class="main-footer">
-            <p class="font-weight-bold text-center">Copyright &copy; - SMART TOUCH GROUP - 2021</p>
+            <p class="font-weight-bold text-center">Tous droits réservés. Copyright © 2021-2022 StudyUp by <a
+                    href="https://smt-group.net/" class="text-decoration-none" target="_blank">Smart Touch Group</a>
+            </p>
         </footer>
         <aside class="control-sidebar control-sidebar-dark"></aside>
     </div>
+
 
     <script src="{{ asset('js/main.js') }}"></script>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

@@ -23,7 +23,7 @@
         <form action="{{ route('login.auth') }}" method="post" class="fit-content login text-center mx-auto">
             @csrf
             <div class="fit-content c mb-4 border rounded">
-                <input type="email" name="email" placeholder="Adresse e-mail"  value="{{ old('email') }}" required class="border-0 text-indent-3">
+                <input type="email"  name="email" placeholder="Adresse e-mail"  value="{{old('email')}}"  required class="border-0 text-indent-3">
             </div>
             <div class="d-flex justify-content-between c align-items-center my-4 border rounded">
                 <input type="password" name="password"  placeholder="Mot de passe" required class="login_password border-0 text-indent-3">

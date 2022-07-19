@@ -48,7 +48,7 @@ class ForgotPasswordController extends Controller
             $message->subject('Reset Password');
         });
 
-        return back()->with('success', 'Un email de réinitialisation de votre mot de passe à été envoyé.Merci de verifier vos e-mails!!!');
+        return back()->with('success', 'Un email de réinitialisation de votre mot de passe à été envoyé. Merci de verifier vos e-mails!');
     }
     /**
      * Write code on Method
@@ -89,6 +89,6 @@ class ForgotPasswordController extends Controller
 
         DB::table('password_resets')->where(['email' => $request->email])->delete();
 
-        return redirect('/login')->with('warning', 'Vous venez de changer votre mot de passe! Connecter vous');
+        return redirect('/login')->with('warning', 'Mot de passe réinitialisé, vous pouvez à présent vous connecter sur votre plateforme mobile !');
     }
 }

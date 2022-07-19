@@ -1,4 +1,3 @@
-
 .file-upload {
     background-color: #ffffff;
     width: 225px;
@@ -50,16 +49,16 @@
     cursor: pointer;
 }
 
-.image-upload-wrap .card{
+.image-upload-wrap .card {
     margin-top: 20px;
     border: 4px solid#e7e8eb;
     position: relative;
 }
-.card{
 
-}
-.image-dropping,.card
-.image-upload-wrap:hover {
+.card {}
+
+.image-dropping,
+.card .image-upload-wrap:hover {
     background-color: #8a9eca;
     border: 4px solid #ffffff;
 }
@@ -114,26 +113,19 @@
     transition: all .2s ease;
 }
 
-#Xy{
+#Xy {
     height: 170px;
 }
-.xy-5{
-   
+
+.xy-5 {
     height: 170px;
 }
-/* .content{
-    margin-top: 25px;
-    
-}.content .card{
-    height: 240px;
+
+
+/* media queries */
+
+@media (max-width:414px) {
+    .ecart_responsive {
+        margin-right: 5px;
+    }
 }
-.input-h{
-    height:150%;
-} */
-/* .content .label{
-    border: none;
-    height: 240px;
-}
-.card .input{
-    height: 200px;
-} */

@@ -58,7 +58,7 @@
                                 </td>
                                 <td class="  d-flex justify-content-around ">
                                     <a href="{{ route('categories.edit',$categorie->id) }}">
-                                        <button class="btn btn-info btn-sm " type="button">
+                                        <button class="btn btn-info btn-sm ecart_responsive" type="button">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Editer

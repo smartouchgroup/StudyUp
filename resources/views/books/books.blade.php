@@ -42,7 +42,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="titreName">Titre du livre</label>
-                                        <input type="text" name="titre" id="inputName" class="form-control" placeholder='Veuillez entre le titre du livre' >
+                                        <input type="text" name="titre" value="{{old('titre')}}"  id="inputName" class="form-control" placeholder='Veuillez entre le titre du livre' >
                                         {!! $errors->first('titre', '<small class="text-danger">:message</small>') !!}
                                     </div>
                                     <div class="form-group">
@@ -73,14 +73,14 @@
                                     <div class="form-group">
                                         <label for="inputDescription">Description /Resumé</label>
                                         <textarea id="inputDescription" name="description" class="form-control"
-                                            rows="10"></textarea>
+                                            rows="10">{{old('description')}}</textarea>
                                             {!! $errors->first('description', '<small class="text-danger">:message</small>') !!}
                                     </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="pages">Nombre de pages</label>
-                                    <input type="number" name="page"  class="form-control" placeholder="Veuillez entrer le nombre de page du livre">
+                                    <input type="number" name="page" value="{{old('page')}}"  class="form-control" placeholder="Veuillez entrer le nombre de page du livre">
                                     {!! $errors->first('page', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="form-group">
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="prix">Prix</label>
-                                    <input type="number" name="prix" id="inputClientCompany" class="form-control" placeholder="Veuillez entrer le prix du livre">
+                                    <input type="number" name="prix" value="{{old('prix')}}"  id="inputClientCompany" class="form-control" placeholder="Veuillez entrer le prix du livre">
                                     {!! $errors->first('prix', '<small class="text-danger">:message</small>') !!}
                                 </div>
                                 <div class="row">
@@ -112,7 +112,7 @@
                                                 onclick="$('.file-upload-input').trigger( 'click' )">Add
                                                 Image</button>
                                             <div class="image-upload-wrap">
-                                                <input class="file-upload-input" type='file' name="photo"
+                                                <input class="file-upload-input" required type='file' name="photo"
                                                     onchange="readURL(this);" accept="image/*" />
                                                     {!! $errors->first('photo', '<small class="text-danger">:message</small>') !!}
                                                 <div class="drag-text">
@@ -158,13 +158,13 @@
                                             <label for="">Ajouter un document</label>
                                         </div>
                                         <div class="card">
-                                            <input class="input bg-white-50" type="file" name="document"  accept="pdf">
+                                            <input class="input bg-white-50" type="file" value="{{ old('document') }}" name="document" required  accept="pdf">
                                             {!! $errors->first('document', '<small class="text-danger">:message</small>') !!}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Publier </button>
+                            <button type="submit" class="btn btn-primary ml-3">Publier </button>
                             </form>
                         </div>
                         <div class="card my-5">
@@ -177,7 +177,7 @@
                                 </div>
                             </div>
                             <div class="card-body p-0">
-                                <table class="table table-striped projects">
+                                <table class="table table-striped projects table-responsive">
                                     <thead>
                                         <tr>
                                             <th style="width: 20%">
