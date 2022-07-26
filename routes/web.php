@@ -53,6 +53,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('manageAdmin', [DashboardController::class, 'manageAdmin'])->name('manageAdmin');
     Route::post('addManager',[DashboardController::class,'addManager'])->name('addManager');
     Route::get('/admin', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('depositTransaction',[DashboardController::class,'depositTransaction'])->name('depositTransaction');
+    Route::get('buyTransaction',[DashboardController::class,'buyTransaction'])->name('buyTransaction');
+    Route::get('deleteTransaction/{id}',[DashboardController::class,'deleteTransaction'])->name('delete.depositTransaction');
     Route::get('/deconnexion', [HomeController::class, 'deconnexion']);
     // CRUDs admin
     Route::resource('categories', CategoriesController::class);

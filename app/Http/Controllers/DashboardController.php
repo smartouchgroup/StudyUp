@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Providers\ManagerAdded;
 use App\Models\Articles;
 use App\Models\Books;
 use App\Models\Contact;
+use App\Models\PaymentBook;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +21,7 @@ class DashboardController extends Controller
         $books = Books::all();
         $articles = Articles::all();
         $messages = Contact::all();
-        $users = User::where('role_id','=', 2)->paginate(10);
+        $users = User::where('role_id','=', 2)->latest()->paginate(10);
         return view('layouts.Admin',compact('books','users','articles','messages'));
     }
     public function manageAdmin(){
@@ -128,6 +130,24 @@ class DashboardController extends Controller
     public function removeManager ($id){
         $user = User::find($id);
         $user->delete();
+        return back()->with('success', 'Suppression éffectué avec succès');
+    }
+
+    public function depositTransaction(){
+        $deposit = Account::latest()->paginate(10);
+        return view('transaction.deposit',compact('deposit'));
+    }
+
+    public function buyTransaction(){
+        $buys = PaymentBook::latest()->paginate(5);
+        return view('transaction.buy',compact('buys'));
+
+    }
+
+    public function deleteTransaction($id){
+        $deposit = Account::find($id);
+        Account::destroy($deposit->id);
+        User::destroy($deposit->amounts->id);
         return back()->with('success', 'Suppression éffectué avec succès');
     }
 

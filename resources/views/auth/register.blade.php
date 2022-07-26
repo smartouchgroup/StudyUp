@@ -24,12 +24,12 @@
                     <form method="POST" action="{{ route('register.auth') }}" class="register">
                         @csrf
                         <div class="form-group row">
-                            <label for="lastname" class="col-md-4 col-form-label text-md-right font-weight-bold">Nom :</label>
+                            <label for="firstname" class="col-md-4 col-form-label text-md-right font-weight-bold">Nom :</label>
                             <div class="col-md-6">
                                 <div class="border rounded text-center">
-                                    <input id="lastname" type="text" class="text-indent-3 @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" placeholder="Ex: Da, Guira ...">
+                                    <input id="firstname" type="text" class="text-indent-3 @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" placeholder="Ex: Da, Guira ...">
                                 </div>
-                                @error('lastname')
+                                @error('firstname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -38,12 +38,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="firstname" class="col-md-4 col-form-label text-md-right font-weight-bold">Prénom(s) :</label>
+                            <label for="lastname" class="col-md-4 col-form-label text-md-right font-weight-bold">Prénom(s) :</label>
                             <div class="col-md-6">
                                 <div class="border rounded text-center">
-                                    <input id="firstname" type="text" class="text-indent-3 @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="name" placeholder="Ex: Aziz, Albert ...">
+                                    <input id="lastname" type="text" class="text-indent-3 @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="name" placeholder="Ex: Aziz, Albert ...">
                                 </div>
-                                @error('firstname')
+                                @error('lastname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

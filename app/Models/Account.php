@@ -8,7 +8,7 @@ class Account extends Model
 {
     protected $fillable = ['user_id', 'amount','phone','otp_code'];
 
-    public function amount()
+    public function amounts()
     {
         return $this->belongsTo(User::class, 'user_id');
     }

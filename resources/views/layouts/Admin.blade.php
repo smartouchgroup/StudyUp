@@ -188,7 +188,28 @@
                                 </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                                <p>
+                                    Transactions
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href=" {{ route('depositTransaction') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dépots</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href=" {{ route('buyTransaction') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Achat de livres</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

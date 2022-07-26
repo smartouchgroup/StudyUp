@@ -27,4 +27,7 @@ class PaymentBook extends Model
     public function countrie(){
         return $this->belongsTo(Countries::class,'pays_id');
     }
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }
